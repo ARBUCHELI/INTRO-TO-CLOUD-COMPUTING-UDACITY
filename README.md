@@ -67,7 +67,7 @@ Organizations of any type, size, or industry use cloud computing. For example:
 
 ## 5. Benefits of Cloud Computing
 
-![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING-UDACITY/master/images/1.jpg?token=ADDIJ7KWRGZXAFYN7U42KJDANB5Q4)
+![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/1.jpg)
 
 ### Agility
 The cloud is agile. Infrastructure resources can spin up when necessary. Among these resources are compute, storage, databases, Internet of things (IoT), machine learning, analytics, and more.
@@ -93,17 +93,17 @@ What are 3 benefits of cloud computing?
 In the early days of the Internet, before cloud computing, hosting providers allocated shared servers where one could run and install a monolithic app. This approach
 encountered challenges to scalability and resiliency, as well as security risks.
 
-![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING-UDACITY/master/images/2.jpg?token=ADDIJ7JF3HN6JR32CXKKTYDANB6E6)
+![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/2.jpg)
 
 Cloud computing became popular in 2006, when Amazon.com released its "Elastic Cloud Compute" service, known as EC2 ('E' for elastic and 2 'C's for Cloud Compute). Cloud computing addresses many of the challenges faced by early application platforms.
 
 The word "cloud" has long been a metaphor for the Internet, and the cloud symbol was used in network telephony schematics all the way back to the 1970s.
 
-![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING-UDACITY/master/images/3.jpg?token=ADDIJ7OFTLEIPQMVPSALQ7DANB6GK)
+![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/3.jpg)
 
 Since 2006, other cloud providers have surfaced. Additionally, many more services have been incorporated into the cloud, to minimize different self-managed services 
 
-![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING-UDACITY/master/images/4.jpg?token=ADDIJ7KBXLO5VMZQ4G256LDANB6IK)
+![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/4.jpg)
 
 necessary to run different types of web applications.
 
@@ -123,11 +123,11 @@ The cloud matters to many few types of people in an organization:
 
 ![](https://video.udacity-data.com/topher/2020/June/5ed9f304_cloud-stakeholders/cloud-stakeholders.png)
 
-![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING-UDACITY/master/images/5.jpg?token=ADDIJ7O4XZ3LNIL4GTIHRKDANB6XE)
+![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/5.jpg)
 
 ## 8. Types of Cloud Computing
 
-![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING-UDACITY/master/images/6.jpg?token=ADDIJ7L36HYNO6CMC5HJXZDANB7BO)
+![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/6.jpg)
 
 ### Infrastructure as a service
 Infrastructure as a service (IaaS), also known as cloud infrastructure services, are highly scalable and automated computing resources.
@@ -164,7 +164,7 @@ The most common option for cloud use, allowing 3rd-party vendors to deliver appl
 
 ## 9. Quiz: Types of Cloud Computing
 
-![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING-UDACITY/master/images/7.jpg?token=ADDIJ7PM55TBEGRPCGUXV4DANDGRS)
+![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/7.jpg)
 
 ## 10. Deployment Models
 
@@ -253,14 +253,14 @@ And there are other key factors such as submarine networking between geographic 
 
 While this doesn't add up to 100%, remember that there are many other cloud providers that, in aggregate, make up the entire cloud computing market.
 
-![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING-UDACITY/master/images/8.jpg?token=ADDIJ7OKFO3AVN27M2WWEXLANDG4A)
+![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/8.jpg)
 
 ### Services
 * AWS offers 200+ services, ranging from computing, storage, and databases through machine learning and artificial intelligence (AI) to Internet of Things (IoT), analytics, and more
 * GCP offers about 50+ services, similar to AWS
 * Azure offers about 30+ services, with a focus on integration with other Microsoft tools
 
-![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING-UDACITY/master/images/9.jpg?token=ADDIJ7K6QAXI6R3OB3ESYLDANDG6S)
+![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/9.jpg)
 
 ### Pricing
 The pricing models of the major cloud provides are similar:
@@ -275,7 +275,7 @@ Discounts also vary between cloud providers. For example, AWS offers reserved in
 
 Serverless computing (Lambda on AWS, Functions on Azure, and Cloud Functions on GCP) are billed for the compute power you use, based on 100-millisecond increments.
 
-![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING-UDACITY/master/images/10.jpg?token=ADDIJ7JGYEJSVPYVZO6AUSLANDHAK)
+![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/10.jpg)
 
 ## 13. Quiz: Major Cloud Providers
 
@@ -332,7 +332,7 @@ If your estimate is correct, your total monthly cost should be approximately <st
 
 Please open the link in a new tab to watch the tutorial:
 
-[![IMAGE ALT TEXT](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING-UDACITY/master/images/11.jpg?token=ADDIJ7OLJ25NZNQH5BL35JTANDHHY)](https://www.youtube.com/watch?v=cMni87XTRbo&feature=emb_logo)
+[![IMAGE ALT TEXT](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/11.jpg)](https://www.youtube.com/watch?v=cMni87XTRbo&feature=emb_logo)
 
 ### Solution
 The following is a solution for the AWS Pricing Calculator exercise.
