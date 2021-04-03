@@ -164,7 +164,7 @@ The most common option for cloud use, allowing 3rd-party vendors to deliver appl
 
 ## 9. Quiz: Types of Cloud Computing
 
-![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING-UDACITY/master/images/7.jpg?token=ADDIJ7LEKUACRH4YS4TFFPTANCAMO)
+![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING-UDACITY/master/images/7.jpg?token=ADDIJ7PM55TBEGRPCGUXV4DANDGRS)
 
 ## 10. Deployment Models
 
