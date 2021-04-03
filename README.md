@@ -277,4 +277,62 @@ Serverless computing (Lambda on AWS, Functions on Azure, and Cloud Functions on 
 
 ![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING-UDACITY/master/images/10.jpg?token=ADDIJ7I3XGYEBYDHZE7RHSDANCDSI)
 
+## 13. Quiz: Major Cloud Providers
+
+### QUIZ QUESTION
+What are the key factors distinguishing between the major cloud providers?
+
+* Geographic Availability in Regions and Zones
+* Pricing Models
+* Services
+* Market Shares and Growth Rate
+
+## 14. Costs
+
+### Costs In The Cloud
+Cost savings is one of the reasons why companies are moving into the Cloud, but these costs can get out of hand easily.
+
+Cloud providers supply up-to-date pricing information for all of their services and components.
+
+Let's explore one way to estimate the costs for the infrastructure we need on AWS using the [AWS Pricing Calculator](https://calculator.aws/#/).
+
+## 15. Quiz: Costs Overview
+
+### Quiz: Costs
+### QUESTION 1 OF 2
+Which tool estimates a service's end-to-end costs?
+* AWS Pricing Calculator
+
+### QUESTION 2 OF 2
+If the cost of a t2.medium is $0.04 per hour, approximately how much would it cost to run an instance for the whole month of January?
+* $30
+
+##  16. Exercise: AWS Pricing Calculator
+
+In this exercise, you will use the [AWS Pricing Calculator](https://calculator.aws/#/) to estimate the costs for a hypothetical upload and resize service hosted on AWS.
+
+The service architecture is:
+
+* Compute and storage run in the ```us-west-2 Oregon``` region
+* One (1) EC2 ```t2.medium on-demand``` instance with a root volume of ```250GB```
+* One (1) S3 bucket with a ```Standard``` storage class, which will store the resized images
+* The size of the uploaded images will not exceed: ```200GB``` per month
+* The resized image requires ```1MB``` of S3 storage
+* The server disk space is cleaned up monthly
+
+Factors you should take into account for the cost estimate:
+
+* There is no charge for <strong>inbound data transfer</strong> across all services in all regions
+* A write operation to S3 is known as a PUT request
+
+### Expected Result
+If your estimate is correct, your total monthly cost should be approximately <strong>64.47 USD.</strong>
+
+## 17. Solution: AWS Pricing Calculator
+
+
+
+
+
+
 
