@@ -512,6 +512,95 @@ Develop the skills you need to join the rapidly growing cloud devops field. With
 
 Play a critical role in an organization’s cloud computing strategy as an AWS Cloud Architect. Learn to plan, design, and implement secure cloud infrastructure in AWS at scale. Begin by designing and building high availability infrastructure, and then move on to building scalable, secure, and cost-optimized architecture. Finally, explore and execute best practices and strategies around securing access to cloud services and infrastructure.
 
+_________________________________________________________________________________________________________________________________________________________________________________
+
+# LESSON 2 FUNDAMENTALS
+
+## 1. Fundamentals
+
+### Cloud Computing Fundamentals
+The fundamentals of cloud computing include both virtualization and characteristics specific to the cloud.
+
+* Managed services
+* On-demand services
+* Scalability
+* Elasticity
+* Security
+
+Virtualization allows cloud providers to share compute, storage, and networking across cloud users. This is the heart of cloud computing.
+
+![](https://video.udacity-data.com/topher/2020/June/5ed9e8ed_course-outline/course-outline.png)
+
+### Course Outline
+In this lesson we will focus on:
+
+* Cloud computing characteristics
+* Virtualization
+
+In future lessons we will cover:
+
+* AWS console, and AWS services
+* Compute services and Virtual Private Cloud
+* Databases, and serverless architecture
+
+## Lesson Outline
+
+* Multi tenant hosts
+* Managed and on-demand services
+* Networking
+* Elasticity and Scalability
+* Security
+* Virtualization and virtual machines
+
+### Lesson
+This lesson covers virtualization and the characteristics of cloud computing.
+
+### Learning Objectives
+By the end of this lesson, you will be able to:
+
+* Pick the right cloud service for your needs
+* Bring up a virtual machine on your own computer
+
+![](https://video.udacity-data.com/topher/2020/June/5edc0f2d_iccfc-lesson-2-outline/iccfc-lesson-2-outline.png)
+
+## Cloud Characteristics
+
+* <strong>Managed services</strong> are operated and maintained by the cloud provider on your behalf
+
+* <strong>On-Demand Services</strong> are available to use and release instantly; only pay for what you use
+
+* <strong>Virtual Private Clouds</strong> allows network customization with grater security and isolation
+
+* <strong>Scalability & Elasticity</strong> refer to the ability of your cloud resources to grow or shrink on-demand
+
+* <strong>Security</strong> includes both network security and access management
+
+![](https://video.udacity-data.com/topher/2020/June/5edc1125_cloud-characteristics/cloud-characteristics.png)
+
+## Quiz: Cloud Characteristics
+
+### QUESTION 1 OF 2
+A user is responsible for installing, maintaining and running a managed service.
+
+* False
+
+![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/12.jpg)
+
+## Virtualization
+
+* Many virtual machines can run on a single host os
+* You can run a VM either on your own local computer or in the cloud
+* Virtual machines running on the same host are isolated from each other
+* Each VM requires an entire operating system (Linux, Windows, etc.)
+
+![](https://video.udacity-data.com/topher/2020/June/5edc133a_virtual-machines/virtual-machines.png)
+
+A host machine has memory, CPU, storage, and networking. The host runs a program called a "hypervisor", which manages multiple "virtual machines", each of which can run its own applications.
+
+
+
+
+
 
 
 
