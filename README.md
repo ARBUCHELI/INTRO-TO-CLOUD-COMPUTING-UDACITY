@@ -332,7 +332,7 @@ If your estimate is correct, your total monthly cost should be approximately <st
 
 Please open the link in a new tab to watch the tutorial:
 
-[![IMAGE ALT TEXT](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING-UDACITY/master/images/11.jpg?token=ADDIJ7MSCJKCV2OCL5DIPDLANDGIY)](https://www.youtube.com/watch?v=cMni87XTRbo&feature=emb_logo)
+[![IMAGE ALT TEXT](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING-UDACITY/master/images/11.jpg?token=ADDIJ7OLJ25NZNQH5BL35JTANDHHY)](https://www.youtube.com/watch?v=cMni87XTRbo&feature=emb_logo)
 
 ### Solution
 The following is a solution for the AWS Pricing Calculator exercise.
