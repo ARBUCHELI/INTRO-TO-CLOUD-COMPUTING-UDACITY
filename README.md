@@ -253,14 +253,14 @@ And there are other key factors such as submarine networking between geographic 
 
 While this doesn't add up to 100%, remember that there are many other cloud providers that, in aggregate, make up the entire cloud computing market.
 
-![](https://github.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING-UDACITY/blob/master/images/8.jpg)
+![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING-UDACITY/master/images/8.jpg?token=ADDIJ7OKFO3AVN27M2WWEXLANDG4A)
 
 ### Services
 * AWS offers 200+ services, ranging from computing, storage, and databases through machine learning and artificial intelligence (AI) to Internet of Things (IoT), analytics, and more
 * GCP offers about 50+ services, similar to AWS
 * Azure offers about 30+ services, with a focus on integration with other Microsoft tools
 
-![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING-UDACITY/master/images/9.jpg?token=ADDIJ7O33QD26F7EU4SZR3DANDBLU)
+![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING-UDACITY/master/images/9.jpg?token=ADDIJ7K6QAXI6R3OB3ESYLDANDG6S)
 
 ### Pricing
 The pricing models of the major cloud provides are similar:
@@ -275,7 +275,7 @@ Discounts also vary between cloud providers. For example, AWS offers reserved in
 
 Serverless computing (Lambda on AWS, Functions on Azure, and Cloud Functions on GCP) are billed for the compute power you use, based on 100-millisecond increments.
 
-![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING-UDACITY/master/images/10.jpg?token=ADDIJ7KOZY3XO2FJZGMVQC3ANDBOE)
+![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING-UDACITY/master/images/10.jpg?token=ADDIJ7JGYEJSVPYVZO6AUSLANDHAK)
 
 ## 13. Quiz: Major Cloud Providers
 
