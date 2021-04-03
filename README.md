@@ -330,7 +330,9 @@ If your estimate is correct, your total monthly cost should be approximately <st
 
 ## 17. Solution: AWS Pricing Calculator
 
-![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING-UDACITY/master/images/11.jpg?token=ADDIJ7PEPSMB662SD4EP463ANC5ZW)
+Please open the link in a new tab to watch the tutorial:
+
+[![IMAGE ALT TEXT](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING-UDACITY/master/images/11.jpg?token=ADDIJ7PEPSMB662SD4EP463ANC5ZW)](https://www.youtube.com/watch?v=cMni87XTRbo&feature=emb_logo)
 
 ### Solution
 The following is a solution for the AWS Pricing Calculator exercise.
@@ -423,7 +425,92 @@ Please keep in mind that pricing always changes and is dynamic.
 
 ![](https://video.udacity-data.com/topher/2020/April/5e85092d_aws-calculator-estimate/aws-calculator-estimate.png)
 
+## 18. Edge Cases
 
+### When Not to Use The Cloud
+There are situation in which the costs of running in the cloud surpass the costs of running and maintaining a set of servers.
+
+One example is GPU machine learning. While the cloud can provide cost optimization for GPU instances via spot instance discounts, often the cost of running a set of cloud GPU instances would be much higher than the cost to buy and maintain your own set of GPU servers.
+
+Other examples include the Private deployment model, which might be on-premise for security or regulatory reasons.
+
+Even though the cloud has many managed services, cloud applications still require an experienced engineer with security, networking, and cloud skills to maintain the application. If an organization lacks such a person, the cloud might not be a good option.
+
+### QUIZ QUESTION
+When should you avoid the cloud?
+
+* When regulations or company policy prohibit you from running in a multi-tenant environment
+* When you lack the expertise to utilize cloud services
+
+## 19. Intuition
+
+### Intuition
+Even though this course is aimed at beginners, we will nonetheless study security, networking, and best practices. In my experience working alongside many beginners, their focus was, "First let's just get it working," without thinking about security or designing a network for their needs. The results were problematic since the work had to be redone.
+
+In this course, you'll learn to work with cloud resources the "right" way.
+
+### 20. Lesson Recap
+
+In this lesson we covered:
+
+* What is cloud computing and who uses it
+* Benefits of cloud computing
+* Types of cloud computing
+* Deployment models
+* Major cloud providers
+* Estimating cloud costs
+
+![](https://video.udacity-data.com/topher/2020/June/5ed9e8ed_course-outline/course-outline.png)
+
+### Course Outline
+In the rest of this course, we will study:
+
+* Cloud Fundamentals
+* AWS Console and AWS Services
+* Compute Services
+* Serverless Architechture
+
+### Further Reading
+### Documentation
+[AWS Getting Started](https://aws.amazon.com/es/getting-started/)
+
+### Books
+[Introduction to Amazon Web Services Beginners Guide Book](https://www.amazon.com/Introduction-Amazon-Services-Beginners-Guide/dp/1539751953)
+
+### Research Papers
+[AWS Well-Architected White Papers](https://aws.amazon.com/architecture/well-architected/?wa-lens-whitepapers.sort-by=item.additionalFields.sortDate&wa-lens-whitepapers.sort-order=desc)
+
+### Blogs
+[AWS Blog](https://aws.amazon.com/blogs/aws/)
+
+## 21. Glossary
+
+<strong>Agility:</strong> The ability of a company to build and operate infrastructure quickly and easily.
+
+<strong>Elasticity:</strong> The ability to shrink or grow the capacity of cloud resources.
+
+<strong>Private Deployment:</strong> A model whereby resources are not shared between organizations and tenants (can be on-premise or in the cloud).
+
+<strong>Public Deployment:</strong> A model whereby services face the internet and resources such as hardware, storage, and network are shared between organizations to reduce costs.
+
+<strong>Hybrid Deployment:</strong> A mix of public and private deployment models.
+
+## 22. Build your career
+
+### Build Your Career: Udacity Cloud Computing Nanodegree Programs
+Thanks for enrolling in our Introduction to Cloud Computing course and congratulations in taking the first step toward an exciting career in cloud computing. The global public cloud computing market is expected to reach over $600 billion by 2023 and cloud professionals are in high demand. Continue to build your career in one of Udacity’s Cloud Computing Nanodegree Programs. Watch the videos below to learn more and click on the name of each Nanodegree to start today!
+
+[Cloud Developer Nanodegree Program](https://www.udacity.com/course/cloud-developer-nanodegree--nd9990)
+
+Learn the fundamentals of cloud development and deployment with AWS. Then, build different apps leveraging microservices, Kubernetes clusters, and serverless application technology.
+
+[Cloud DevOps Engineer Nanodegree Program](https://www.udacity.com/course/cloud-dev-ops-nanodegree--nd9991)
+
+Develop the skills you need to join the rapidly growing cloud devops field. With the help of expert instructors and mentors, you’ll learn to deploy apps and infrastructure as code on AWS, build CI/CD pipelines, and operationalize microservices at scale using Kubernetes.
+
+[AWS Cloud Architect Nanodegree Program](https://www.udacity.com/course/aws-cloud-architect-nanodegree--nd063)
+
+Play a critical role in an organization’s cloud computing strategy as an AWS Cloud Architect. Learn to plan, design, and implement secure cloud infrastructure in AWS at scale. Begin by designing and building high availability infrastructure, and then move on to building scalable, secure, and cost-optimized architecture. Finally, explore and execute best practices and strategies around securing access to cloud services and infrastructure.
 
 
 
