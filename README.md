@@ -330,6 +330,141 @@ If your estimate is correct, your total monthly cost should be approximately <st
 
 ## 17. Solution: AWS Pricing Calculator
 
+![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING-UDACITY/master/images/11.jpg?token=ADDIJ7PEPSMB662SD4EP463ANC5ZW)
+
+### Solution
+The following is a solution for the AWS Pricing Calculator exercise.
+
+We will first disaggregate the cloud services. Then we will configure the attributes of each service in the [AWS pricing calculator](https://calculator.aws/#/).
+
+### Breakdown
+The upload service is built on top of 2 cloud services:
+
+* EC2 for compute
+* S3 for cloud storage
+
+Region for service: ```us-west-2 (Oregon)``` region
+
+### EC2 Information We Know
+* The EC2 instance payment model is ```on-demand```
+* There is one EC2 instance of ```t2.medium``` type
+* The size for root storage on the instance is ```250GB```
+
+### S3 Information We Know
+* The default storage class for S3 is ```standard``` which is what the service will use
+* We will be storing ```200GB``` of images per month
+* Each image stored on S3 will be 1MB
+* A write operation in S3 is known as ```Put request```, so if we convert the 200GB to MB we should get 200,000MB (multiply the digital storage value by 1000)
+
+### Walkthrough
+### EC2 Cost Estimation
+Open up the [AWS Pricing Calcuator](https://calculator.aws/#/)
+
+Click on the <strong>Create estimate</strong> button
+
+Type <strong>ec2</strong> in the <strong>AWS services</strong> filter box, then click on the <strong>configure</strong> button
+
+![](https://video.udacity-data.com/topher/2020/April/5e84f9fb_ec2-configure/ec2-configure.png)
+
+Change the ```Region``` dropdown to ```US West (Oregon)``` and leave the default option to create a Quick estimate.
+
+Choose the option of ```Search instances by name``` and Enter ```t2.medium``` for the instance type
+
+![](https://video.udacity-data.com/topher/2020/April/5e84f9f9_screen-shot-2020-04-01-at-12.17.23/screen-shot-2020-04-01-at-12.17.23.png)
+
+Scroll down the ```Pricing strategy``` box and choose ```On-Demand instances```
+
+![](https://video.udacity-data.com/topher/2020/April/5e850644_aws-calculator-ec2-pricing-strategy/aws-calculator-ec2-pricing-strategy.png)
+
+Scroll down the ```Pricing strategy``` box and choose ```On-Demand instances```
+
+Now let's configure the root size of the ```Elastic Block Storage (EBS)``` which is the disk connected to the instance.
+
+The default is ```General Purpose SSD (gp2)``` which is what we want so we just need to change the ```Storage amount to 250GB```
+
+![](https://video.udacity-data.com/topher/2020/April/5e850698_aws-calculator-ec2-ebs/aws-calculator-ec2-ebs.png)
+
+At this point we can already tell that the EC2 would cost us $58.87 USD monthly, That's all we need for the EC2 section, so let's click the ```Add to my estimate``` button
+
+![](https://video.udacity-data.com/topher/2020/April/5e85071c_aws-calculator-ec2-summry/aws-calculator-ec2-summry.png)
+
+### Configure The S3 For The Service
+Now that we have the estimate built for our compute section let's add to it the S3 storage service.
+
+Click the ```Add service``` button to add a new service, then type ```s3``` in the AWS services filter box, notice how other services that use S3 also coming up in the search as the filter look up the description too.
+
+scroll down and look for the actual service, S3 is called ```Simple Storage Service``` these 3 Initials are all starting with the letter S which is 3S => S3
+
+![](https://video.udacity-data.com/topher/2020/April/5e8507cb_aws-calculator-s3-intro/aws-calculator-s3-intro.png)
+
+Click on the ```Configure``` button on the ```Amazon Simple Storage Service``` button to configure the S3 service.
+
+Make sure the region is set to ```US West (Oregon)```
+
+un-toggle all of the Storage classes but the ```S3 Standard``` as well as the ```Data Transfer``` as we are not going to pull data from S3 and all Incoming traffic is free.
+
+![](https://video.udacity-data.com/topher/2020/April/5e8507ca_aws-calculator-s3-storage-class/aws-calculator-s3-storage-class.png)
+
+We know that the service will be uploading 200GB per month of images so let's configure the storage amount to 200GB per month
+
+and under the ```PUT, COPY, POST, LIST requests to S3 standard``` type 200,000
+
+scroll down to the bottom of the page and click the ```Add to my estimate``` button
+
+![](https://video.udacity-data.com/topher/2020/April/5e8507c9_aws-calculator-s3-storage/aws-calculator-s3-storage.png)
+
+Your S3 cost should come up to somewhere around <strong>$5.60 USD</strong>
+
+![](https://video.udacity-data.com/topher/2020/April/5e8507c8_aws-calculator-s3-summary/aws-calculator-s3-summary.png)
+
+Your Estimate should come up to somewhere around <strong>$64.47 USD</strong>
+
+Please keep in mind that pricing always changes and is dynamic.
+
+![](https://video.udacity-data.com/topher/2020/April/5e85092d_aws-calculator-estimate/aws-calculator-estimate.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
