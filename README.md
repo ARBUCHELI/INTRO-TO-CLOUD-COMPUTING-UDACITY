@@ -1,6 +1,6 @@
 # INTRO-TO-CLOUD-COMPUTING-UDACITY
 
-# LESSON 1
+# LESSON 1 OVERVIEW
 
 ## 1. Meet your instructor 
 
