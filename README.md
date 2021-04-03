@@ -543,7 +543,7 @@ In future lessons we will cover:
 * Compute services and Virtual Private Cloud
 * Databases, and serverless architecture
 
-## Lesson Outline
+## 2. Lesson Outline
 
 * Multi tenant hosts
 * Managed and on-demand services
@@ -563,7 +563,7 @@ By the end of this lesson, you will be able to:
 
 ![](https://video.udacity-data.com/topher/2020/June/5edc0f2d_iccfc-lesson-2-outline/iccfc-lesson-2-outline.png)
 
-## Cloud Characteristics
+## 3. Cloud Characteristics
 
 * <strong>Managed services</strong> are operated and maintained by the cloud provider on your behalf
 
@@ -577,7 +577,7 @@ By the end of this lesson, you will be able to:
 
 ![](https://video.udacity-data.com/topher/2020/June/5edc1125_cloud-characteristics/cloud-characteristics.png)
 
-## Quiz: Cloud Characteristics
+## 4. Quiz: Cloud Characteristics
 
 ### QUESTION 1 OF 2
 A user is responsible for installing, maintaining and running a managed service.
@@ -586,7 +586,7 @@ A user is responsible for installing, maintaining and running a managed service.
 
 ![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/12.jpg)
 
-## Virtualization
+## 5. Virtualization
 
 * Many virtual machines can run on a single host os
 * You can run a VM either on your own local computer or in the cloud
@@ -596,6 +596,24 @@ A user is responsible for installing, maintaining and running a managed service.
 ![](https://video.udacity-data.com/topher/2020/June/5edc133a_virtual-machines/virtual-machines.png)
 
 A host machine has memory, CPU, storage, and networking. The host runs a program called a "hypervisor", which manages multiple "virtual machines", each of which can run its own applications.
+
+## 6. Quiz: Virtualization
+
+### QUESTION 1 OF 3
+Can you run both Windows and Linux virtual machines on macOS?
+* Yes
+
+### QUESTION 2 OF 3
+What is the software core component that makes virtualization happen?
+* Hypervisor
+
+### QUESTION 3 OF 3
+What is a VM?
+* A virtual machine, which runs its own operating system and shares some of the physical host's resources
+
+
+
+
 
 
 
