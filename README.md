@@ -611,6 +611,46 @@ What is the software core component that makes virtualization happen?
 What is a VM?
 * A virtual machine, which runs its own operating system and shares some of the physical host's resources
 
+## 7. Exercise: Virtualization
+
+You are about to use a hypervisor called VirtualBox to bring up a Linux Ubuntu virtual machine on your own computer!
+
+Cloud computing relies heavily on virtualization. Launching your own virtual machine is great preparation for working with cloud resources.
+
+VirtualBox is open-source software that you can install on your own computer. This hypervisor allows you to run a "guest" operating system on top of your own "host" operating system.
+
+This flexibility allows, for example, a Windows VM on a macOS or Linux host.
+
+VirtualBox also allows you to allocate part of the host's resources (CPU, memory, disk) to the guest OS.
+
+Cloud Computing works similarly. For example, one physical host (which cloud customers typically cannot access) can run many Instances, akin to guests.
+
+### VirtualBox Installation
+Head over to [VirtualBox's Download page](https://www.virtualbox.org/wiki/Downloads) and download the right copy for your system under the <strong>VirtualBox platform packages</strong> section.
+
+Open up installation executable and click through the setup dialogs.
+
+Once VirtualBox is installed, launch it and you will see the <strong>Welcome to VirtualBox</strong> window.
+
+### Exercise Requirements
+* VirtualBox version 6 (or higher)
+* Download the [Ubuntu 19.04 (64-bit) VirtualBox disk image](https://www.osboxes.org/ubuntu/)
+* Extract the image using:
+>> * Linux: [p7zip](http://p7zip.sourceforge.net/)
+>> * macOS: [Keka](https://www.keka.io/en/)
+>> * Windows: [7zip](https://www.7-zip.org/download.html)
+
+![](https://video.udacity-data.com/topher/2020/April/5e86b74a_vbox-welcome/vbox-welcome.png)
+
+### Exercise
+
+* Allocate 512MB of memory to the VM
+* For the Hard Disk, select the option ```Use existing virtual hard drive file``` and point to the downloaded image which should be in a ```VDI``` format
+* From the VM settings -> Display tab, drag the ```Scale Factor``` slider all the way to the right (300%)
+* Start the VM and use the <strong>Password:</strong> ```5osboxes.org``` to login
+* Stop the VM and resize the amount of memory to ```1024MB``` via ```Settings``` -> ```System```
+* Resize the number of allocated CPU's to ```2```
+* Start the VM again, login and check the Memory and CPU count matching via the Apps icon (grid on the bottom of the dock) and ```Details```
 
 
 
