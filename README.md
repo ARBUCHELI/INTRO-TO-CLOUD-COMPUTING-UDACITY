@@ -1097,6 +1097,90 @@ If not:
 * 9. Log back in with the manager account
 * 10. Try again to configure MFA
 
+## 20. Simple Storage Service (S3)
+
+![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/15.jpg)
+
+![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/16.jpg)
+
+### Simple Storage Service (S3)
+* AWS S3 is central cloud object storage available in many geographic locations ("regions")
+* Permissions to access S3 are set via AWS IAM policy
+* An S3 bucket is an object (file) store with high availability
+* Within an S3 bucket, you can create folders and upload files to into specific folders
+* S3 storage is very economical
+* IAM permissions control access to S3 buckets
+* An IAM policy can apply to a specific bucket
+
+## 21. Quiz: S3 Bucket
+
+### QUIZ QUESTION
+What is the requirement for uploading to an S3 Bucket ?
+* The user must have IAM permissions to write and list files
+
+## 22. Exercise: Creating S3 Bucket And Uploading ContentIn this exercise, you will create an S3 bucket and upload files to it.
+
+### Instructions
+* If you have not done so already, register with AWS and authenticate as the manager user
+* Create a bucket in the <strong>us-west-2</strong> Oregon region
+* Create 2 folders in the bucket: "exercise" and "manager"
+* Upload content to both folders (a single file in each folder will suffice)
+
+### Note: Please do not delete the bucket until the end of this course. Deleting a bucket takes a long time. If you delete the bucket and then try to create it again later, you may run into errors.
+
+## 23. Solution: Creating S3 Bucket And Uploading Content
+
+Part-1: Creating The Bucket
+
+* 1. Log out of the root account user by clicking on the top right email next between the Bell icon and the Global dropdown menu
+* 2. Log in to the console as the manager, using the information from you've got from the previous step
+* 3. Navigate to the S3 console
+* 4. Create a new bucket (remember that bucket names are globally unique across all AWS accounts)
+
+![](https://video.udacity-data.com/topher/2020/April/5e8b7269_s3-1/s3-1.png)
+
+Note that if a bucket name already exists you will get a warning.
+
+### Note:
+
+Deleting a bucket takes time, so creating the same bucket name after a deletion would not allow you to create the bucket and will result in a "Bucket already exists error"
+
+![](https://video.udacity-data.com/topher/2020/April/5e8b7268_s3-3/s3-3.png)
+
+* 5. Once the bucket is created, click on the Create folder button to create a manager folder
+
+![](https://video.udacity-data.com/topher/2020/April/5e8b7267_s3-4/s3-4.png)
+
+![](https://video.udacity-data.com/topher/2020/April/5e8b7267_s3-4/s3-4.png)
+
+* 6. Create another folder called exercise
+
+![](https://video.udacity-data.com/topher/2020/April/5e8b73f7_s3-11/s3-11.png)
+
+* 7. Click on the <strong>exercise</strong> folder to get into that folder
+* 8. Click on the <strong>Upload</strong> button to upload a file (any file) into that folder
+
+![](https://video.udacity-data.com/topher/2020/April/5e8b7266_s3-5/s3-5.png)
+
+* 9. Either drag and drop a file onto the window or click the Add files button to start the upload process
+
+![](https://video.udacity-data.com/topher/2020/April/5e8b7266_s3-6/s3-6.png)
+
+* 10. Click the <strong>Next</strong> button to see the list of default permissions for this file (we will use IAM permission to access it rather than resource permissions)
+
+* 11. Click Next to see the S3 storage classes, and leave the default Standard class selected
+
+![](https://video.udacity-data.com/topher/2020/April/5e8b7265_s3-7/s3-7.png)
+
+* 12. Click the Upload button to start the upload.
+
+![](https://video.udacity-data.com/topher/2020/April/5e8b7264_s3-8/s3-8.png)
+
+![](https://video.udacity-data.com/topher/2020/April/5e8b7263_s3-9/s3-9.png)
+
+
+
+
 
 
 
