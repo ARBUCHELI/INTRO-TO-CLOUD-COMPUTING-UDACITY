@@ -741,7 +741,7 @@ Cloud computing offers dedicated hosts, too. This means that the entire physical
 
 One use case for that would be launching a few virtual machines on the same physical host, for better placement and performance. A risk, however, is that this host becomes of a single point of failure for all of these instances.
 
-## Edge Cases
+## 9. Edge Cases
 
 ### When Not To Use A VM
 Remember that a VM acquires resources from the host computer. An idling or underutilized VM, which does not need its full computing power, drains resources the host could use for other tasks or share with other VMS.
@@ -757,8 +757,38 @@ What characteristics matter when deciding whether to use a VM?
 * Underutilizied VM
 * Overutlizised VM
 
+## 10. Lesson Recap
 
+In this lesson you:
 
+* Learned about virtualization and cloud computing characteristics
+* Launched a virtual machine on your own computer!
+
+In the next lesson, you will:
+
+* Sign up for Amazon Web Services
+* Navigate and interact with the AWS console
+* Create an IAM user
+* Configure an IAM policy
+* Launch an S3 bucket to store files in the cloud
+
+![](https://video.udacity-data.com/topher/2020/June/5edc1e7b_course-outline/course-outline.png)
+
+### Further Reading
+### Documentation
+* [Virtualbox documentation](https://www.virtualbox.org/wiki/Documentation)
+* [Understanding Virtualization by RedHat](https://www.redhat.com/en/topics/virtualization)
+* [Virtualization - a complete guide by I.B.M](https://www.ibm.com/cloud/learn/virtualization-a-complete-guide)
+
+### Books
+* [Virtualization Essentials](https://www.amazon.com/Virtualization-Essentials-Matthew-Portnoy/dp/1118176715)
+
+### Research Papers
+* [Research on the Virtualization Technology in Cloud Computing Environment](https://www.researchgate.net/publication/297603485_Research_on_the_Virtualization_Technology_in_Cloud_Computing_Environment)
+
+### Blogs
+* [An introduction to virtualization](https://medium.com/@rohithaelsa/an-introducton-to-virtualization-b67a58bee4e8)
+* [Virtualization basics](https://medium.com/@jain.sm/virtualization-basics-dad2f20067e6)
 
 
 
