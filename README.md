@@ -1195,14 +1195,64 @@ Creating IAM policies on specific resources requires identifying that specific r
 
 ![](https://video.udacity-data.com/topher/2020/June/5edd3aa2_iam-inline-policy/iam-inline-policy.png)
 
+## 25. Solution: IAM Inline Policy
 
+While logged in as the <strong>manager</strong> user account via an incognito/private browser window, create the <strong>exercise</strong>IAM user as follow:
 
+* 1. Navigate to the IAM console
+* 2. From the left sidebar menu, click on Users
+* 3. Click on <strong>Add user</strong> button and name it <strong>exercise-user</strong>
+* 4. Select the option <strong>AWS Management Console access</strong> and uncheck the <strong>Require password reset</strong> option
+* 5. Skip the <strong>Set permissions</strong> and create the user by clicking through the <strong>Next</strong> button
+* 6. Note the password for the <strong>exercise</strong> user and click the <strong>Close</strong> button
 
+![](https://video.udacity-data.com/topher/2020/April/5e8b784e_iam-9/iam-9.png)
 
+## Granting Permissions For The Exercise User
+In order for the <strong>exercise</strong> user to be able to download/upload content on the S3 bucket we need the following permissions:
 
+<strong>ListAllMyBuckets</strong> - allow listing all the buckets in the console <strong>ListBucket</strong> - allow listing a specific bucket content <strong>GetObject</strong> - allow retrieving a file
 
+<strong>Note:</strong> for upload permission we would need the <strong>PutObject</strong> permission (this is not a requirement for this exercise)
 
+### Creating an IAM Inline Policy
+* 1. Click the <strong>exercise</strong> user to get into the user details
+* 2. Click the <strong>+ Add inline policy</strong> link to create a new policy
 
+![](https://video.udacity-data.com/topher/2020/April/5e8b794a_iam-policy-1/iam-policy-1.png)
+
+* 3. In the <strong>Service</strong> field Select <strong>S3</strong>
+* 4. Type <strong>ListBucket</strong> in the <strong>Actions</strong> field and select <strong>ListBucket</strong> as well as <strong>ListAllMyBuckets</strong>
+
+![](https://video.udacity-data.com/topher/2020/April/5e8b8508_s3-13/s3-13.png)
+
+* 5. Under the <strong>Resources</strong> dropdown, select <strong><Specific</strong> and set the bucket name to the bucket name you have created previously
+
+![](https://video.udacity-data.com/topher/2020/April/5e8b96eb_screen-shot-2020-04-06-at-13.53.25/screen-shot-2020-04-06-at-13.53.25.png)
+
+![](https://video.udacity-data.com/topher/2020/April/5e8b7a2f_ima-policy-5/ima-policy-5.png)
+
+### Read-Only (GetObject) Permissions
+* 1. Click the <strong>Add additional permissions</strong> link
+* 2. Select <strong>S3</strong>at the <strong>Service</strong> field and type <strong>GetObject</strong> in the <strong>Actions</strong> field
+* 3. Select the <strong>GetObject</strong> option
+* 4. Now let's limit the user access to the <strong>exercise</strong> folder, expand the <strong>Resources</strong> section and click on <strong>Add ARN</strong> link
+* 5. Fill in the bucket name and in the object field type the folder name <strong>exercise</strong>
+* 6. Since objects are just files and not folder the bucket name will hold the folder name to access, so click on the <strong>Any</strong> checkbox to grant read on any object in the <strong>exercise</strong> folder
+
+![](https://video.udacity-data.com/topher/2020/April/5e8b7c7a_iam-policy-8/iam-policy-8.png)
+
+* 7. Name the policy <strong>exerciseReadOnlyAccess</strong> and create it
+
+![](https://video.udacity-data.com/topher/2020/April/5e8b7d27_iam-policy-10/iam-policy-10.png)
+
+### Part-2: Validation
+* 1. Using the <strong>exercise</strong> user in a new incognito/private browser window log in to the AWS console
+* 2. Navigate to the S3 bucket and click on the bucket you have created
+* 3. You should be able to see both folders <strong>manager</strong> and <strong>exercise</strong> - you should only be able to download any file from the exercise folder and none from the manager folder
+* 4. Click on the <strong>exercise</strong> folder and select a file, try to delete it from the <strong>Actions</strong> button and verify you get a <srong>permission denied</strong> error
+
+![](https://video.udacity-data.com/topher/2020/April/5e8b982f_screen-shot-2020-04-06-at-13.09.35/screen-shot-2020-04-06-at-13.09.35.png)
 
 
 
