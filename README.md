@@ -1000,7 +1000,17 @@ Which permissions should you grant a user who needs access to read from an S3 bu
 
 ![](https://video.udacity-data.com/topher/2020/June/5edd2b78_iam-policy-json/iam-policy-json.png)
 
+## 16. Exercise: Creating A Manager IAM User With Built-in Policies
 
+In this exercise, you will create an IAM user for a manager, and apply built-in IAM policies.
+
+### Instructions
+* Create an IAM user
+* Name the user "manager"
+* Provide this user with:
+>> * IAM Full Access permissions
+>> * S3 Full Access permissions
+>> * EC2 Full Access permissions
 
 
 
