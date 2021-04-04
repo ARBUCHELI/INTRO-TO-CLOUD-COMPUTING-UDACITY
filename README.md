@@ -934,11 +934,41 @@ In this situation, you can create a user with AWS credentials and without MFA on
 When should you not secure an IAM user with MFA?
 * When a 3rd party service needs access to the AWS account
 
+## 9. Securing Root User With MFA
 
+Please open the link in a new tab to watch the tutorial:
 
+[![IMAGE ALT TEXT](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/13.jpg)](https://www.youtube.com/watch?v=lIRttRwhVQ4&t=25s)
 
+### Securing the Root User with MFA
+Multi-factor authentication (MFA) is important and should be activated whenever possible.
 
+You should enable the MFA for the root account.
 
+The Google Authenticator app can scan a QR code from AWS and synchronize with it so that every time you sign in to AWS, you will need to provide a code from Google Authenticator.
+
+## 10. AWS Console
+
+The console is the graphical user interface (GUI) to access and configure AWS services. The AWS console supports both search and navigation. If you have the URL for a service, you can also go directly to that URL (e.g. a bookmark).
+
+The console has built-in help functionality, including wizards and templates to rapidly configure services with default settings.
+
+## 11. Quiz: AWS Console
+
+### QUIZ QUESTION
+Name two ways to navigate to an AWS service console.
+* Click on the Services dropdown menu
+* Use the text field with a magnifying glass to search for a service
+* Navigate to the service's URL directly, for example: https://console.aws.amazon.com/apigateway
+
+## 12. IAM
+
+* Identity and Access Management (IAM) is a service that manages access to AWS resources securely
+* Policies can be applied to resources or identities
+* IAM supports creating users, groups, and roles
+* There is no charge for the IAM service
+* Access is granted through IAM policies, which are either "built-in", "custom", or "inline"
+* IAM policies are usually of the format, "resource:action" (e.g. "s3:ListBucket")
 
 
 
