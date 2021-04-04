@@ -810,17 +810,99 @@ ________________________________________________________________________________
 
 ## 1. AWS Console and Access
 
+### AWS Console and Access
+The AWS console is the user interface that allows access and configuration of services.
 
+One of the services for controlling that access is called IAM - Identity And Access Management. With IAM you can create identities and policies to configure access to resources.
 
+In this lesson, you will create an S3 bucket as well as IAM users to access and upload content to that bucket.
 
+More specifically, you will create IAM policies to allow access to that S3 bucket and specify the actions a user can perform.
 
+![](https://video.udacity-data.com/topher/2020/June/5edc6e07_course-outline/course-outline.png)
 
+## 2. Lesson Outline
 
+## Course Outline
+So far in this course, we have covered:
 
+* Overview
+* Fundamentals
 
+In this lesson, we will focus on:
 
+* AWS console and AWS services
+* Identity and Access Management (IAM)
+* Creating IAM User and Policies
+* Creating and using S3 bucket
 
+In future lessons we will cover:
 
+* Compute services
+* Databases and serverless architecture
+
+![](https://video.udacity-data.com/topher/2020/June/5edc6f1b_course-outline/course-outline.png)
+
+### Lesson Outline
+This lesson covers signing up for AWS, navigating and interacting with AWS services via the console, and creating
+
+* IAM users
+* IAM policies
+* S3 buckets
+
+### Learning Objectives
+By the end of this lesson, you will be able to:
+
+* Sign up for AWS services
+* Secure your AWS root account using multi-factor authentication
+* Navigate AWS services via the console
+* Create an S3 bucket
+* Create an IAM user
+* Configure an IAM inline policy to permit reading and writing to an S3 bucket
+* Browse an S3 bucket
+* Upload files to an S3 bucket
+
+## 3. Big Picture
+Navigating the AWS console and interacting with AWS services is a key skill for cloud computing.
+
+Similarly, creating users, protecting those users with multi-factor authentication (MFA) and configuring permissions is imperative.
+
+![](https://video.udacity-data.com/topher/2020/June/5edc724f_iam-big-picture/iam-big-picture.png)
+
+## 4. Signing Up With AWS
+
+### Create Your Own AWS Account
+Follow these steps to create your own AWS account. You can skip these steps if you already have an AWS account.
+
+* 1. Visit the [Amazon Web Services](https://aws.amazon.com/?nc1=h_ls) homepage
+* 2. Click the <strong>Create A Free Account</strong> button
+* 3. Provide your email and a strong password, and name your AWS account
+* 4. Choose <strong>Personal</strong> account - there is no difference in features or services between a Personal and a Professional account
+* 5. Fill in the required fields and click <strong>Continue</strong>
+* 6. <strong>Add a payment method.</strong> In this course, we will use services within the [AWS Free Tier](https://aws.amazon.com/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc), so that you will not be charged. However, the Free Tier has limits and AWS will eventually charge you if you do not terminate your resources. At the end of this course, please remember to delete all the resources you have created.
+* 7. Specify a payment method.
+
+### Further Instructions
+[Create and Activate an AWS Account](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)
+
+## 5. Usage Alerts
+
+The [AWS Free Tier](https://aws.amazon.com/free/) allows you to gain free hands-on experience with AWS service.
+
+The Free Tier has limits, however. AWS does not provide an ability to automatically stop all services before you exceed the Free Tier. However, AWS Usage Alerts can help you monitor if your usage and costs, so that you can stop services yourself before you incur unexpected charges.
+
+AWS Budgets is a service that can be accessed from your root account (or a user with billing admin permissions). This service allows you to create forecasts and alerts to notify you when you are about to exceed your budget.
+
+Specifically, AWS Budgets can monitor your Free Tier usage and notify you via an email alert before you exceed the Free Tier.
+
+* 1. Sign in to the AWS Console with your root account
+* 2. Go to [Billing and Cost Managment](https://signin.aws.amazon.com/signin?redirect_uri=https%3A%2F%2Fconsole.aws.amazon.com%2Fbilling%2Fhome%3Fstate%3DhashArgs%2523%26isauthcode%3Dtrue&client_id=arn%3Aaws%3Aiam%3A%3A934814114565%3Auser%2Fportal-aws-auth&forceMobileApp=0&code_challenge=q1YnTQfOB3ZCycHrVI92ijCeezFbxYBqTA3o3uQyVDk&code_challenge_method=SHA-256)
+* 3. Under <strong>Preferences</strong>, click on <strong>Billing Preferences</strong> from the left sidebar
+* 4. Under <strong>Cost Management Preferences</strong>, select <strong>Receive Free Tier Usage Alerts</strong>
+
+By default, alerts will be sent to the root account email address. If you would like to change that, you can add an alternative address to the <strong>Email address</strong> field.
+
+![](https://video.udacity-data.com/topher/2020/June/5eddd9fc_screen-shot-2020-05-20-at-13.37.34/screen-shot-2020-05-20-at-13.37.34.png)
 
 
 
