@@ -970,7 +970,13 @@ Name two ways to navigate to an AWS service console.
 * Access is granted through IAM policies, which are either "built-in", "custom", or "inline"
 * IAM policies are usually of the format, "resource:action" (e.g. "s3:ListBucket")
 
+## 13. IAM Users
 
+![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/14.jpg)
+
+* An IAM user is an identity that allows access to AWS resources, either via the console (username and password authentication) or programmatically (access key and secret key authentication)
+* Users should be granted the least permissions they need - this reduces the potential for error or malfeasance
+* Permissions can be attached to the user by built-in policies or by inline policies
 
 
 
