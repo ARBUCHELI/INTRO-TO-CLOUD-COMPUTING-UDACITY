@@ -741,6 +741,26 @@ Cloud computing offers dedicated hosts, too. This means that the entire physical
 
 One use case for that would be launching a few virtual machines on the same physical host, for better placement and performance. A risk, however, is that this host becomes of a single point of failure for all of these instances.
 
+## Edge Cases
+
+### When Not To Use A VM
+Remember that a VM acquires resources from the host computer. An idling or underutilized VM, which does not need its full computing power, drains resources the host could use for other tasks or share with other VMS.
+
+In the case of underutilization, a [container](https://www.docker.com/resources/what-container) or [serverless](https://blog.hubspot.com/website/serverless-functions) function might be a better choice.
+
+On the other end of the spectrum, a VM might need more resources than the host can provide. In this case, a [dedicated](https://aws.amazon.com/es/ec2/pricing/dedicated-instances/) server might be a better choice.
+
+QUIZ QUESTION
+What characteristics matter when deciding whether to use a VM?
+
+* Idling processes
+* Underutilizied VM
+* Overutlizised VM
+
+
+
+
+
 
 
 
