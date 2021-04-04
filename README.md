@@ -1178,8 +1178,22 @@ Deleting a bucket takes time, so creating the same bucket name after a deletion 
 
 ![](https://video.udacity-data.com/topher/2020/April/5e8b7263_s3-9/s3-9.png)
 
+## 24. Exercise: IAM Inline Policy
 
+In this exercise, you will create an IAM user for this specific exercise and apply inline IAM policies.
 
+Creating IAM policies on specific resources requires identifying that specific resource uniquely. AWS uses a unique identifier called an "ARN" (Amazon Resource Name) to identify a specific resource.
+
+### Instructions
+* If you have not already done so, sign up with AWS, log in using the <strong>manager</strong> user, create an <strong>S3 bucket</strong>, and create an <strong>exercise</strong> and <strong>manager</strong> folder within that bucket
+* As the <strong>manager</strong> user, visit the IAM console and create a new user called <strong>exercise-user</strong>
+* Create an <strong>inline IAM policy</strong> on the <strong>exercise-user</strong> allowing:
+>> * <strong>ListAllMyBucket:</strong> Required to view the buckets in S3
+>> * <strong>ListBucket:</strong> Required to list the contents of a particular bucket - use the <strong>ARN</strong> of the S3 bucket you previously created
+>> * <strong>GetObject:</strong> Required to view any object within the <strong>exercise</strong> folder - use <strong>ARN (Amazon Resource Name)</strong> of the folder
+>> >> * The <strong>ARN</strong> of the folder is in the format: "[bucket_name]/[folder_name]" (e.g. "udacity/exercise")
+
+![](https://video.udacity-data.com/topher/2020/June/5edd3aa2_iam-inline-policy/iam-inline-policy.png)
 
 
 
