@@ -1051,6 +1051,16 @@ While logged in as the root account user, navigate to the IAM console.
 
 * 13. Copy and save both the password (show password) and the login URL somewhere you will be able to access it later
 
+## 18. Exercise: Securing IAM User With MFA
+
+In this exercise, you will secure an IAM user with multi-factor authentication (MFA).
+
+### Instructions
+* If you have not yet done so, you must first create a <strong>manager</strong> AWS account
+* Install an MFA app on your phone - the <strong>Google Authenticator</strong> app ([Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_US), [iOS](https://apps.apple.com/us/app/google-authenticator/id388497605)) is a good choice
+* Secure the manager account with MFA
+* Log out and log back in to verify that MFA is enabled
+
 
 
 
