@@ -1061,6 +1061,63 @@ In this exercise, you will secure an IAM user with multi-factor authentication (
 * Secure the manager account with MFA
 * Log out and log back in to verify that MFA is enabled
 
+## 19. Solution: Securing IAM User With MFA
+
+Navigate to the IAM console and select the user you want to secure with MFA (in this series of exercises this would be the <strong>manager</strong> user). -->9179@82yAnn
+
+* 1. Click on the user account and open the <strong>Security Credentials</strong> tab
+
+![](https://video.udacity-data.com/topher/2020/April/5e8b9d6b_screen-shot-2020-04-06-at-14.19.39/screen-shot-2020-04-06-at-14.19.39.png)
+
+* 2. Click <strong>Manage</strong> next to the <strong>Assign MFA device</strong>
+* 3. Leave the default <strong>Virtual MFA device</strong> option on and click continue
+* 4. Click the <strong>Show QR code</strong> in the empty square
+
+![](https://video.udacity-data.com/topher/2020/April/5e8ba078_screen-shot-2020-04-06-at-14.34.16/screen-shot-2020-04-06-at-14.34.16.png)
+
+* 5. Open the <strong>Google Authenticator</strong> app on your phone and click the <strong>Scan a barcode</strong> camera icon
+* 6. Scan the barcode
+* 7. Type the code you see on your phone into the <strong>MFA code 1</strong> field
+* 8. Wait for the Google Authenticator app to generate the next code
+* 9. Type the next consecutive code into the <strong>MFA code 2</strong> field and click the <strong>Assign MFA</strong> button
+* 10. Using a new incognito or private browser window to login with this user and the MFA code from your phone
+
+If you have configured MFA correctly you should be able to log in.
+
+If not:
+
+* 1. Log in as the root user
+* 2. Proceed to the IAM service console
+* 3. Click on <strong>Users</strong>
+* 4. Select the <strong>manager</strong> user
+* 5. Visit the <strong>Security credentials</strong> tab
+* 6. Next to <strong>Assigned MFA device</strong>, click <strong>Manage</strong>
+* 7. Remove the assigned MFA device
+* 8. Log out of the root user account
+* 9. Log back in with the manager account
+* 10. Try again to configure MFA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
