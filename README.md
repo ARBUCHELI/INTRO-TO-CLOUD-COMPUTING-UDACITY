@@ -652,18 +652,94 @@ Once VirtualBox is installed, launch it and you will see the <strong>Welcome to 
 * Resize the number of allocated CPU's to ```2```
 * Start the VM again, login and check the Memory and CPU count matching via the Apps icon (grid on the bottom of the dock) and ```Details```
 
+## 8. Solution: Virtualization
 
+### Solution: Creating A New Virtual Machine From A Virtual Disk Image
+Once VirtualBox is installed, and the Ubuntu 19.04 (64-bit) <strong>virtual disk image VDI</strong> is extracted, we will create a new Virtual Machine from it.
 
+Open up VirtualBox app, you should see the empty dialog box: <strong>Welcome to VirtualBox</strong>
 
+Click the <strong>New</strong> button and set the following:
 
+* <strong>Name:</strong> Ubuntu
+* <strong>Type:</strong> Linux
+* <strong>Version:</strong> Ubuntu (64-bit)
 
+Then click Continue.
 
+![](https://video.udacity-data.com/topher/2020/April/5e86c1ff_vbox-1/vbox-1.png)
 
+Click Continue and set the <strong>Memory Size</strong> to 512MB.
 
+![](https://video.udacity-data.com/topher/2020/April/5e86c1ff_vbox-2/vbox-2.png)
 
+On the Hard Disk setup, choose the <strong>Use an existing virtual hard disk file option</strong>.
 
+![](https://video.udacity-data.com/topher/2020/April/5e86c632_screen-shot-2020-04-02-at-22.14.15/screen-shot-2020-04-02-at-22.14.15.png)
 
+Then, click the folder icon to the right to browse to the file location.
 
+Note that you can choose the option <strong>VDI</strong> from the dropdown box.
+
+The file should be in the Downloads folder and should be inside of a folder called <strong>64bit</strong>
+
+Select the <strong>Ubuntu 19.04 (64bit).vdi</strong> file followed by the <strong>Open</strong> button.
+
+![](https://video.udacity-data.com/topher/2020/April/5e86c1fe_vbox-3/vbox-3.png)
+
+Before you start the VM, we need to set the screen size to a normal working size. To do that, click the VM settings, Display tab and drag the <strong>Scale Factor</strong> slider all the way to the right and set it at 300%.
+
+![](https://video.udacity-data.com/topher/2020/April/5e86c1fa_vbox-8/vbox-8.png)
+
+Now, start the VM. Log in as "osboxes.org" use the password "osboxes.org" to login.
+
+Skip <strong>Connect your online account</strong>
+
+Ignore the message about upgrades and click through the welcome screen.
+
+![](https://video.udacity-data.com/topher/2020/April/5e86c1f9_vbox-9/vbox-9.png)
+
+![](https://video.udacity-data.com/topher/2020/April/5e86c1f5_vbox-11/vbox-11.png)
+
+### Resizing the VM
+Stop the VM.
+
+Go back into the settings and click on the System tab.
+
+The default tab on this settings is <strong>Motherboard</strong>
+
+Set the <strong>Base Memory</strong> to 1024MB.
+
+![](https://video.udacity-data.com/topher/2020/April/5e86c1fd_vbox-4/vbox-4.png)
+
+Click on the <strong>Processor</strong> tab on the top and set the CPU count to 2.
+
+![](https://video.udacity-data.com/topher/2020/April/5e86c1fb_vbox-5/vbox-5.png)
+
+Once you click OK, you can see the changes in the info screen.
+
+![](https://video.udacity-data.com/topher/2020/April/5e86c1fb_vbox-6/vbox-6.png)
+
+Start the VM again, click on the APPs icons (Grid Icon) on the dock to the left and choose the System Settings icon.
+
+On the bottom of it, you should see the <strong>Details</strong> section. Click on it and verify that the CPU and memory are matching the new settings.
+
+![](https://video.udacity-data.com/topher/2020/April/5e86c1f3_vbox-12/vbox-12.png)
+
+### Conclusion
+Congratulations! You have launched a virtual machine on your local computer!
+
+This is a major step toward understanding how cloud computing works.
+
+You might wonder how many VMs you could launch on your local machine. Could your local machine become a cloud provider, all by itself?
+
+The number of VMs that can be launched on a physical host depends on the shared resources allocations. Your local machine probably has enough resources to comfortably support several VMs, but nothing on the scale of a cloud provider.
+
+The concept of virtualization maps directly to cloud computing, though. Multiple tenants can share the resources of a physical host, with a separation between the VM guests.
+
+Cloud computing offers dedicated hosts, too. This means that the entire physical host is dedicated to a single customer.
+
+One use case for that would be launching a few virtual machines on the same physical host, for better placement and performance. A risk, however, is that this host becomes of a single point of failure for all of these instances.
 
 
 
