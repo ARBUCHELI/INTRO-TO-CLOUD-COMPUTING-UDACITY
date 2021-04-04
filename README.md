@@ -790,6 +790,22 @@ In the next lesson, you will:
 * [An introduction to virtualization](https://medium.com/@rohithaelsa/an-introducton-to-virtualization-b67a58bee4e8)
 * [Virtualization basics](https://medium.com/@jain.sm/virtualization-basics-dad2f20067e6)
 
+## 11. Glossary
+
+<strong>Guest:</strong> The operating system that runs inside a virtual machine.
+
+<strong>Host:</strong> The physical computer running the guest VM.
+
+<strong>Hypervisor:</strong> Software that manages virtual machines and facilitates hardware emulation for the guest VMs.
+
+<strong>Managed Services:</strong> A set of services that the cloud provider runs and operates on your behalf.
+
+<strong>Virtual Machine:</strong> An isolated environment that acts and behaves like a real computer, and runs on a host machine, sharing its resources.
+
+<strong>Virtualization:</strong> A technology that allows for the creation of software-based virtual machines that can run multiple operating systems from a single physical machine.
+
+_________________________________________________________________________________________________________________________________________________________________________________
+
 
 
 
