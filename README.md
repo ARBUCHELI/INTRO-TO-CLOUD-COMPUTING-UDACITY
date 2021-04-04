@@ -904,7 +904,35 @@ By default, alerts will be sent to the root account email address. If you would 
 
 ![](https://video.udacity-data.com/topher/2020/June/5eddd9fc_screen-shot-2020-05-20-at-13.37.34/screen-shot-2020-05-20-at-13.37.34.png)
 
+## 6. Multi-Factor Authentication
 
+### Multi-Factor Authentication (MFA)
+* MFA is two-step verification, which increases security
+* MFA requires a physical device (such as your smartphone) to generate a code that is matched to your username and password
+* Only the correct combination of a username, password, and MFA code allows authentication
+* MFA codes refresh every 30 seconds
+
+### Add MFA to Your AWS Account
+* Navigate the AWS console to add MFA to your own AWS root account.
+
+## 7. Quiz: Multi-Factor Authentication
+### QUIZ QUESTION
+How should you secure your AWS root user?
+* Set a long and complex password
+* Add multi-factor authentication, which requires a physical device to authenticate
+
+## 8. Edge Case: MFA and IAM
+
+### When should you not secure an IAM user with MFA?
+Often the cloud can be extended by 3rd party services that are outside the cloud, these 3rd party services providers might not be running on the same cloud provider, thus they need to programmatically log in to AWS.
+
+This login cannot be done with multi-factor authentication as you can't get the 3rd party service provider to physically activate the MFA.
+
+In this situation, you can create a user with AWS credentials and without MFA only grant the minimum permissions needed by the service and rotate the credentials every 30 days
+
+### QUIZ QUESTION
+When should you not secure an IAM user with MFA?
+* When a 3rd party service needs access to the AWS account
 
 
 
