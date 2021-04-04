@@ -978,6 +978,27 @@ Name two ways to navigate to an AWS service console.
 * Users should be granted the least permissions they need - this reduces the potential for error or malfeasance
 * Permissions can be attached to the user by built-in policies or by inline policies
 
+## 14. Quiz: Create an IAM User
+
+### QUIZ QUESTION
+Which permissions should you grant a user who needs access to read from an S3 bucket but does not need to use any other service?
+* Always grant the minimum permissions required
+
+## 15. IAM Policies
+
+* IAM permissions are granted via "policies"
+* A policy defines who can access a resource and what actions are allowed on that resource
+* Each IAM policy is composed of actions, resources, and principals
+>> * principal => either an IAM user or a role
+>> * actions => what the principal can / can't do
+>> * resources => where can the principal perform these actions
+
+* There are three types of IAM policies:
+>> * "Built-in" policies provided by AWS
+>> * "Custom" policies created by AWS users
+>> * "Inline" policies
+
+![](https://video.udacity-data.com/topher/2020/June/5edd2b78_iam-policy-json/iam-policy-json.png)
 
 
 
