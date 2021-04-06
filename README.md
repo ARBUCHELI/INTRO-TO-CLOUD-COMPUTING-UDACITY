@@ -2244,16 +2244,75 @@ Wait a few minutes for the instance to initialize. You can refresh the dashboard
 
 ![](https://video.udacity-data.com/topher/2020/April/5e8fd9f0_screen-shot-2020-04-09-at-19.28.47/screen-shot-2020-04-09-at-19.28.47.png)
 
+## 9. Lambda Functions
 
+Runs the code automatically, without the need to provision or manage servers.
 
+Simply, write your code, upload it to Lambda and run.
 
+Your code can run multiple times and in parallel.
 
+Supports multiple languages and there is not need to install any software.
 
+![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/26.jpg)
 
+Can have multiple triggers.
 
+### Lambda Function
+* Serverless fast solution to run code for a task
+* Write code directly in the AWS console or upload a zip package with dependencies
+* Supports multiple code languages
+* Can be tested from the console
 
+![](https://video.udacity-data.com/topher/2020/June/5edee29e_lambda-triggers/lambda-triggers.png)
 
+## 10. Quiz: Lambda Functions
 
+### QUIZ QUESTION
+How do you add code with dependencies to Lambda?
+* Create a zip of the code and dependancies and upload the zip to the Lambda
+
+## 11. Exercise: Hello from Lambda
+In this exercise, you will create a basic Lambda Function.
+
+### Instructions
+* Create a Lambda Function from scratch
+* The Lambda Handler should be set to the default <strong>lambda_function.lambda_handler</strong>
+* Manually trigger the Lambda via a test event and verify the message "Hello from Lambda"
+
+## 12. Solution: Hello from Lambda Exercise
+
+[![IMAGE ALT TEXT](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/19.jpg)](https://www.youtube.com/watch?v=y2Z2DqZopRw&t=1s)
+
+### Solution: Hello from Lambda
+* 1. Navigate to the Lambda Console by searching for <strong>Lambda</strong> under <strong>Find Services</strong>
+
+![](https://video.udacity-data.com/topher/2020/June/5edf09bd_screen-shot-2020-06-08-at-20.58.16/screen-shot-2020-06-08-at-20.58.16.png)
+
+* 2. Click the <strong>Create function</strong> button and select <strong>Author from scratch</strong>
+* 3. Name the function <strong>hello</strong>
+* 4. Set the runtime to <strong>Python3.8</strong>
+* 5. Click the <strong>Create Function</strong> button
+
+![](https://video.udacity-data.com/topher/2020/June/5edf09ca_screen-shot-2020-06-08-at-20.58.48/screen-shot-2020-06-08-at-20.58.48.png)
+
+* 6. Notice the <strong>handler</strong> field on the embedded code page. It's format is <strong>file-name.function-name</strong>. In our case, the file name is <strong>lambda_function.py</strong> and the code function name is <strong>lambda_handler</strong>, which is why the handler is pre-set to <strong>lambda_function.lambda_handler</strong>.
+
+![](https://video.udacity-data.com/topher/2020/June/5edf09de_screen-shot-2020-06-08-at-20.59.12/screen-shot-2020-06-08-at-20.59.12.png)
+
+* 7. Click on the <strong>Test</strong> button and configure a test event.
+* 8. Name the event <strong>hellotest</strong> and save the event.
+
+![](https://video.udacity-data.com/topher/2020/June/5edf09ec_screen-shot-2020-06-08-at-21.00.12/screen-shot-2020-06-08-at-21.00.12.png)
+
+* 9. Click the <strong>Test</strong> button again while the <strong>hellotest</strong> event is pre-selected
+
+![](https://video.udacity-data.com/topher/2020/June/5edf09fc_screen-shot-2020-06-08-at-21.00.29/screen-shot-2020-06-08-at-21.00.29.png)
+
+* 10. Expand the <strong>Execution result</strong>
+* 11. Verity the message: <strong>"Hello From Lambda!"</strong>
+
+![](https://video.udacity-data.com/topher/2020/June/5edf0a07_screen-shot-2020-06-08-at-21.01.07/screen-shot-2020-06-08-at-21.01.07.png)
 
 
 
