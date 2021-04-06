@@ -1628,12 +1628,19 @@ In the <strong>Description</strong> tab at the bottom of the screen, we can now 
 
 ![](https://video.udacity-data.com/topher/2020/April/5e8cfdfa_screen-shot-2020-04-07-at-15.24.37/screen-shot-2020-04-07-at-15.24.37.png)
 
+## 12. Terminate Instance
 
+Now that you have practiced launching an EC2 instance, let's practice cleaning up (i.e. terminating) that instance. Cleaning up resources is important so that we don't incur any unexpected charges.
 
+Select the instance ID from the AWS Instances console.
 
+![](https://video.udacity-data.com/topher/2020/June/5edd9a73_select-instance/select-instance.png)
 
+From the <strong>Actions</strong> dropdown menu, select <strong>Instance State</strong>, followed by <strong>Terminate</strong>.
 
+![](https://video.udacity-data.com/topher/2020/June/5edd9ac0_terminate-instance/terminate-instance.png)
 
+Confirm that the instances reaches the <strong>Terminated</strong> state. This may take a few minutes.
 
 
 
