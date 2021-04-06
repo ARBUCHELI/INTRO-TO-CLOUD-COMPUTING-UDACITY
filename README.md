@@ -1254,20 +1254,141 @@ In order for the <strong>exercise</strong> user to be able to download/upload co
 
 ![](https://video.udacity-data.com/topher/2020/April/5e8b982f_screen-shot-2020-04-06-at-13.09.35/screen-shot-2020-04-06-at-13.09.35.png)
 
+## 26. Quiz: Read-Only IAM Policy
 
+### Quiz: Read-Only IAM Policy
 
+### QUESTION 1 OF 2
+What is the name of the service to create users and access policies?
 
+* IAM
 
+### QUESTION 2 OF 2
+Which of the following permissions are read-only?
+* "S3:ListBucket"
 
+* "S3:GetObject"
 
+## 27. Lesson Conclusion
 
+### Lesson Recap
+In this lesson you:
 
+* Signed up for AWS
+* Created multiple IAM users
+* Secured those users with multi-factor authentication
+* Attached IAM policies to those users
+* Navigated AWS services using the console
+* Created an S3 bucket
+* Browsed, uploaded to, and downloaded from that S3 bucket
 
+In the next lesson, you will:
 
+* Learn about the Elastic Compute Cloud (EC2) service
+* Launch an EC2 instance (i.e. a virtual server)
+* Configure security groups to control access to that instance
+* Allocate a static IP via Elastic IP
+* Provision the instance via an init script
+* Create an IAM role to manage the EC2 instance
+* Connect your EC2 and S3 resources
 
+Let's go!
 
+![](https://video.udacity-data.com/topher/2020/June/5edc6f1b_course-outline/course-outline.png)
 
+### Further Reading
+### Documentation
+* IAM Getting Started (https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started.html)
+* Understanding how IAM works (https://docs.aws.amazon.com/IAM/latest/UserGuide/intro-structure.html)
+* IAM policy evaluation logic (https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic.html)
+* Testing IAM Policies with the IAM policy simulator (https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_testing-policies.html)
 
+### Blogs
+* Demystifiying AWS IAM (https://blog.getdockup.com/post/demystifying-aws-iam/)
+* AWS IAM Deep Dive (https://blog.tovmasyan.io/aws-iam-deep-dive-chapter-1-essentials-a9cfb1931a01?gi=a033437d2647)
+* AWS IAM Resources (https://aws.amazon.com/iam/resources/?nc=sn&loc=4&iam-blogs.sort-by=item.additionalFields.createdDate&iam-blogs.sort-order=desc)
+
+## 28. Glossary
+
+* <strong>Bucket:</strong> a storage resource within S3, similar to a folder
+
+* <strong>IAM:</strong> Identity and Access Management is the service for creating identities and policies to govern access to resources
+
+* <strong>IAM User:</strong> a type of identity designed for console and programmatic access to the AWS services
+
+* <strong>IAM Policy:</strong> a document defining who can do what on which resource
+
+* <strong>Object:</strong> a unit of storage in S3, typically an object is a file
+
+< strong>S3:</strong> Simple Storage Service, which is AWS's service to store files in the cloud
+
+## 29. AWS Account Setup
+
+### Step 1. Create an AWS Account
+Open a regular AWS account (if you don't already have one) following the instructions via the [Amazon Web Service Help Center](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)
+
+### Step 2. Get Promo Codes
+Udacity has partnered with AWS to provide nominal credits for learners whose coursework requires AWS services to complete. To request a promo code, you can submit a Support ticket [here](https://udacity.zendesk.com/hc/en-us/signin?return_to=https%3A%2F%2Fudacity.zendesk.com%2Fhc%2Fen-us%2Frequests%2Fnew%3Fticket_form_id%3D110806).
+
+* 1. Under the <strong>"Reason for Contact"</strong> field, choose <strong>"Third-Party Access, Promo Codes & License keys"</strong>, then choose <strong>"AWS"</strong> in the dropdown.
+
+![](https://video.udacity-data.com/topher/2020/November/5fbb4c2e_screenshot-2020-11-23-at-11.13.32-am/screenshot-2020-11-23-at-11.13.32-am.png)
+
+* 2. Please note that a regular AWS account will receive a promo code from Udacity with a fixed amount of AWS credits.
+
+### Step 3. Apply Promo Code to Your AWS Account
+To apply your promo code, follow below:
+
+* 1. Go to the [AWS Billing Dashboard](https://us-east-1.signin.aws.amazon.com/oauth?response_type=code&client_id=arn%3Aaws%3Aiam%3A%3A934814114565%3Auser%2Fportal-aws-auth&redirect_uri=https%3A%2F%2Fconsole.aws.amazon.com%2Fbilling%2Fhome%3Fstate%3DhashArgs%2523%252F%26isauthcode%3Dtrue&forceMobileLayout=0&forceMobileApp=0&code_challenge=dkR7DMIVwTgADA6smwewYbv8YS-T1FQlFO0UBBIQi7Q&code_challenge_method=SHA-256).
+* 2. Click <strong>"Credits"</strong> on the left side of the screen, and click on the <strong>Redeem credit</strong> button. Enter the promo-code you have received.
+* 3. Credits will automatically be applied to your bill. Refresh the page and you will be able to view your credits under the <strong>Credits</strong> page.
+
+![](https://video.udacity-data.com/topher/2020/November/5fbb4a3b_screenshot-2020-11-23-at-11.02.59-am/screenshot-2020-11-23-at-11.02.59-am.png)
+
+### AWS Free Tier
+It is an offering from AWS that allows you to use most of the AWS services free of cost up to a certain usage limit for one year. In addition to the promo codes provided by Udacity, you can also leverage the [AWS Free Tier Access](https://aws.amazon.com/premiumsupport/knowledge-center/what-is-free-tier/).
+
+### According to AWS:
+
+>>> The AWS Free Tier is automatically activated on each new AWS account.
+
+Check the list of services covered under Free Tier [here](https://aws.amazon.com/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all).
+
+>> <strong>Note</strong> - You will be responsible for charges incurred from usage that exceeds the AWS Free Tier limits and credits provided by Udacity.
+
+## 30. Monitor your AWS Costs and Credits
+
+### Monitoring your AWS Costs and Credits
+All AWS services are a pay-as-you-go service, so we urge our students to closely monitor their usage costs and if they have adequate credits available to complete their project/task. Follow the instructions below to do that:
+
+### Step 1. Log into your [AWS account](https://us-east-1.signin.aws.amazon.com/oauth?SignatureVersion=4&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJMOATPLHVSJ563XQ&X-Amz-Date=2021-04-06T05%3A57%3A42.069Z&X-Amz-Signature=02894049d5815ce76e8fb52cd7d554973ff2c87bf57e93f3d2bb1625ef8c2023&X-Amz-SignedHeaders=host&client_id=arn%3Aaws%3Aiam%3A%3A015428540659%3Auser%2Fhomepage&code_challenge=0pDPeSFi-xicamChdPUR7H4Yk9fG2pEhgnn8lzyDUp4&code_challenge_method=SHA-256&redirect_uri=https%3A%2F%2Fconsole.aws.amazon.com%2Fconsole%2Fhome%3Fstate%3DhashArgs%2523%26isauthcode%3Dtrue&response_type=code&state=hashArgs%23).
+### Step 2. Examine your costs
+Go to [https://console.aws.amazon.com/billing/](https://us-east-1.signin.aws.amazon.com/oauth?SignatureVersion=4&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAI6EECTLVZXJOHYRQ&X-Amz-Date=2021-04-06T05%3A58%3A09.860Z&X-Amz-Signature=edbf1e40599fd2c7f506e6a5cb075b956365fd8953895a646fc9cf80cdba5120&X-Amz-SignedHeaders=host&client_id=arn%3Aaws%3Aiam%3A%3A934814114565%3Auser%2Fportal-aws-auth&code_challenge=VWbOI_OMsEtleqMelhpx-TbkI53XyRgimyaPteyhquE&code_challenge_method=SHA-256&redirect_uri=https%3A%2F%2Fconsole.aws.amazon.com%2Fbilling%2Fhome%3Fstate%3DhashArgs%2523%26isauthcode%3Dtrue&response_type=code&state=hashArgs%23)
+
+You should see the following billing dashboard where it will show your costs.
+
+![](https://video.udacity-data.com/topher/2020/May/5ec71862_screen-shot-2020-05-21-at-5.07.48-pm/screen-shot-2020-05-21-at-5.07.48-pm.png)
+
+If your account has been created within one year from the current date, your [AWS Billing Dashboard](https://us-east-1.signin.aws.amazon.com/oauth?SignatureVersion=4&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAI6EECTLVZXJOHYRQ&X-Amz-Date=2021-04-06T05%3A59%3A24.703Z&X-Amz-Signature=6e5319b643c4627cec8895c59cfb7268a2b017a1cd534e578780128c6a6c61ee&X-Amz-SignedHeaders=host&client_id=arn%3Aaws%3Aiam%3A%3A934814114565%3Auser%2Fportal-aws-auth&code_challenge=wWhT_Fk_BVY_1NvSP7ZnIC71MVSh0OjNbOood6I6xt4&code_challenge_method=SHA-256&redirect_uri=https%3A%2F%2Fconsole.aws.amazon.com%2Fbilling%2Fhome%3Fstate%3DhashArgs%2523%252F%26isauthcode%3Dtrue&response_type=code&state=hashArgs%23%2F) will also show the resource usage statistics for the free tier services. See the snapshot below:
+
+![](https://video.udacity-data.com/topher/2020/November/5fbb70d9_screenshot-2020-11-23-at-12.54.53-pm/screenshot-2020-11-23-at-12.54.53-pm.png)
+
+### Step 3 (optional). Check the value of your credits.
+Click on the "Credits" from the left navigation menu, and the following screen will show your available credits.
+
+![](https://video.udacity-data.com/topher/2020/May/5ec71a62_screen-shot-2020-05-21-at-5.13.56-pm/screen-shot-2020-05-21-at-5.13.56-pm.png)
+
+### Note: For student learning, Udacity has partnered with Amazon to provide nominal credits for the student to complete their course work. Please understand that these credits are limited and available for you to use judiciously. You are responsible for any additional costs beyond the given credits.
+
+### When will I be charged?
+There are no tools to limit usage to what’s covered by the AWS Free Tier. This means that you are responsible for the services that you launch. You will be charged standard pay-as-you-go service rates for using AWS resources that exceed the AWS Free Tier limits and the credits provided by Udacity.
+
+### Shut Down your Resources, if not in use
+>> The Free Tier benefits and the credit amount provided by the Udacity Support team will be sufficient for you to complete your Nanodegree program.
+
+>> <strong>Note:</strong> We recommend you shut down every resource (e.g., EC2 instances, or any other hosted service) on the AWS cloud immediately after the usage, otherwise you will run out of your free promo credits.
+
+Remember, even if you are in the middle of the project and need to step away, PLEASE SHUT DOWN YOUR RESOURCES. You can re-instantiate later.
 
 
 
