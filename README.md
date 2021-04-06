@@ -1736,6 +1736,87 @@ service nginx start
 
 ![](https://video.udacity-data.com/topher/2020/April/5e8d29fc_screen-shot-2020-04-07-at-18.29.41/screen-shot-2020-04-07-at-18.29.41.png)
 
+## 17. Elastic IP
+
+![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/20.jpg)
+![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/21.jpg)
+![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/22.jpg)
+
+[![IMAGE ALT TEXT](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/19.jpg)](https://www.youtube.com/watch?v=P4c5bS6jpBw)
+
+### Elastic IP
+* Allocate a public, static IP address that can be associated with an instance
+* Reachable from the internet
+* Once associated, it becomes the public IP of the instance
+* You can not have 2 public IP address per instance
+* Can be disassociated from an instance
+* You only pay for unassociated Elastic IPs
+
+## 18. Quiz: Elastic IP
+
+### QUIZ QUESTION
+What is the purpose of creating an Elastic IP Address?
+* To reserve a static IP address that can be attached to an AWS resource
+
+## 19. Exercise: Elastic IP
+
+In this exercise, you will allocate an Elastic IP and assign it to your instance.
+
+### Instructions
+* If you have not done so already, launch an EC2 instance
+* Allocate an <strong>Elastic IP</strong>
+* Associate the Elastic IP with your EC2 instance
+* Verify that the Elastic IP address works
+
+## 20. Solution: Elastic IP
+
+By default, EC2 instances do not get a public IP address. Even If you do assign an automatic public IP address in the Launch Wizard, the address will change on the next restart.
+
+Elastic IP is a way to maintain the same external public IP address for an Instance or application.
+
+From the EC2 console sidebar menu, under the <strong>Network & Security</strong> section click on <strong>Elastic IPs</strong> .
+
+![](https://video.udacity-data.com/topher/2020/April/5e8d016d_screen-shot-2020-04-07-at-15.38.06/screen-shot-2020-04-07-at-15.38.06.png)
+
+Click on the <strong>Allocate Elastic IP Address</strong> button to allocate a new IP address out of the AWS IPv4 pool.
+
+![](https://video.udacity-data.com/topher/2020/April/5e8d017a_screen-shot-2020-04-07-at-15.38.47/screen-shot-2020-04-07-at-15.38.47.png)
+
+Click on the <strong>Allocate</strong> button.
+
+![](https://video.udacity-data.com/topher/2020/April/5e8d018e_screen-shot-2020-04-07-at-15.39.10/screen-shot-2020-04-07-at-15.39.10.png)
+
+The newly-created Elastic IP address is not associated with any instance. Click on the <strong>Associate this Elastic IP address</strong> button, or select it and from the <strong>Actions</strong> dropdown and choose <strong>Associate Elastic IP Address</strong>.
+
+In the next window, in the instance field, select the instance with which you want to associate the Elastic IP address.
+
+![](https://video.udacity-data.com/topher/2020/April/5e8d02f3_screen-shot-2020-04-07-at-15.39.31/screen-shot-2020-04-07-at-15.39.31.png)
+
+![](https://video.udacity-data.com/topher/2020/April/5e8d02dc_screen-shot-2020-04-07-at-15.39.47/screen-shot-2020-04-07-at-15.39.47.png)
+
+Once the instance is associated, you can click on <strong>Associated Instance ID</strong> to see the instance's details. On that screen, you can see the Elastic IP next to the instance ID. You can also verify that the Elastic IP address is the same as the instance's IPv4 Public IP.
+
+![](https://video.udacity-data.com/topher/2020/April/5e8d01a0_screen-shot-2020-04-07-at-15.40.19/screen-shot-2020-04-07-at-15.40.19.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
