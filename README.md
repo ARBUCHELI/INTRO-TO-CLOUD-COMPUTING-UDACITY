@@ -1642,9 +1642,99 @@ From the <strong>Actions</strong> dropdown menu, select <strong>Instance State</
 
 Confirm that the instances reaches the <strong>Terminated</strong> state. This may take a few minutes.
 
+## 13. Init Script
 
+### Init Script
+* An init script can be configured on instance launch page under userData section
+* Can be used to run commands, install and configure an instance only during first boot
+* Can be configured to run on every reboot
+* Instances must have a public IP to install software from the internet
+* Can be written in any language if the instance image AMI has the required software, mainly written in Bash
 
+Please open the link in a new tab to watch the tutorial:
 
+[![IMAGE ALT TEXT](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/19.jpg)](https://www.youtube.com/watch?v=E3J73eQqopo&t=1s)
+
+## 14. Quiz: Init Script
+
+### QUESTION 1 OF 3
+Which of the following are true about init scripts?
+
+* Automatically install and configure software
+* Launch the first time an instance boots
+* Can be launched on every reboot - if so configured
+
+### QUESTION 2 OF 3
+Where in the EC2 Launch Wizard do we add an init script?
+* User Data section
+
+### QUESTION 3 OF 3
+What is the default behavior for an init script configuration?
+* An init script only runs the first time an instance boots
+
+## 15. Exercise: Init Script
+In this exercise, you will automatically provision an EC2 Instance using an init script, which runs at first boot.
+
+### Instructions
+* EC2 instance AMI: <strong>Amazon Linux AMI 2</strong>
+* Instance type: <strong>t2.micro</strong>
+* Instance should be open for traffic from <strong>anywhere</strong> on <strong>port 80</strong>
+* Instance must have a <strong>public IP address</strong> to be able to reach the internet and install <strong>NGINX</strong>
+
+For this exercise, we can ignore SSH permissions, as we do not need them.
+
+Use this code as the init-script:
+
+```
+  #!/bin/bash
+
+  yum update -y
+  amazon-linux-extras install nginx1.12 -y
+  service nginx start
+```
+
+### Goal
+We should be able to access the instance's public IP address via a web browser. The NGINX default page should appear: <strong>Welcome to NGINX</strong>.
+
+## 16. Solution: Init Script Exercise
+
+### Solution: Init Script Exercise
+When you launch an EC2 instance, you have the option of passing <strong>user-data</strong> that you can use to configure or install software on your instance.
+
+This is also known as an "Init script". For this exercise solution, we will program a shell script to be our init script.
+
+By default, Init scripts run only on the first boot of the instance. We can configure an existing instance to run its init script on every restart, but we do not need that for this exercise.
+
+### Part 0: Clean Up
+If you haven't already, terminate all previous instances by selecting them in the EC2 Instances Dashboard. From the <strong>Actions</strong> dropdown menu select <strong>Instance state</strong>, followed by <strong>Terminate</strong>.
+
+![](https://video.udacity-data.com/topher/2020/April/5e8cebfc_screen-shot-2020-04-07-at-14.08.47/screen-shot-2020-04-07-at-14.08.47.png)
+
+### Part :1 Launch an EC2 Instance
+* 1. Using the EC2 Console, select Instances from the sidebar and click <strong>Launch instance</strong>
+* 2. Select <strong>t2.micro</strong> instance type and click the <strong>Next: Configure Instance Details</strong> button
+* 3. Set the <strong>Auto-assign public IP</strong> to <strong>Enabled</strong>, because we need an Internet connection to install the NGINX software
+* 4. Scroll down to the <strong>Advanced Details</strong< section, where we will configure the init script to install the NGINX server
+
+![](https://video.udacity-data.com/topher/2020/April/5e8d24cc_screen-shot-2020-04-07-at-18.10.33/screen-shot-2020-04-07-at-18.10.33.png)
+
+5. Copy the following commands into the <strong>User data</strong> box
+
+```
+#!/bin/bash
+
+yum update -y
+amazon-linux-extras install nginx1.12 -y
+service nginx start
+```
+
+* 6. Click <strong>Review and Launch</strong>, then edit the <strong>Security Groups</strong>
+* 7. Either select an existing security group that allows HTTP access, or create a new such security group
+* 8. Click <strong>Review and Launch</strong> and then launch the EC2 instance
+* 9. Find the instance's <strong>IPv4 Public IP</strong> address from the EC2 Instance Dashboard
+* 10. Visit the IP address in the browser and you should see the default Nginx page
+
+![](https://video.udacity-data.com/topher/2020/April/5e8d29fc_screen-shot-2020-04-07-at-18.29.41/screen-shot-2020-04-07-at-18.29.41.png)
 
 
 
