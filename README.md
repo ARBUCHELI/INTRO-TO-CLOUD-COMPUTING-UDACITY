@@ -1588,11 +1588,45 @@ In this exercise, you will create a <strong>security group</strong> to allow tra
 * Create a new Security Group allowing <strong>Port 80</strong> and <strong>Port 22</strong> Inbound traffic from <strong>anywhere</strong> (any IP address)
 * Attach the security group to the instance
 
+## 11. Solution: Security Group
 
+### Solution: Security Group Exercise
+If you have not done so already, launch an EC2 instance from the EC2 console.
 
+### Part 1: Create a Security Group
+From the EC2 console, scan the sidebar to find the <strong>Network & Security</strong> section. Within that section click on <strong>Security Groups</strong>.
 
+![](https://video.udacity-data.com/topher/2020/April/5e8cf604_screen-shot-2020-04-07-at-14/screen-shot-2020-04-07-at-14.jpg)
 
+Click on the <strong>Create security group</strong> button
 
+Fill the information for your security group name and description.
+
+![](https://video.udacity-data.com/topher/2020/April/5e8cf70f_screen-shot-2020-04-07-at-14.55.06/screen-shot-2020-04-07-at-14.55.06.png)
+
+Click on the <strong>Add Rule</strong> button under the inbound section and add the following rules:
+
+```
+SSH TCP 22 Anywhere
+
+HTTP TCP 80 Anywhere
+```
+![](https://video.udacity-data.com/topher/2020/April/5e8cf7ba_screen-shot-2020-04-07-at-14.58.59/screen-shot-2020-04-07-at-14.58.59.png)
+
+Click on the <strong>Create security group</strong> button to create the security group.
+
+<strong>Part 2: Attach The Security Group To An EC2 Instance</strong>
+Navigate via the sidebar to EC2 Instances Dashboard. Select the instance to which you want to add the security group.
+
+From the <strong>Actions</strong> dropdown menu select <strong>Networking</strong>, followed by <strong>Change Security Groups</strong>.
+
+![](https://video.udacity-data.com/topher/2020/April/5e8cfd23_screen-shot-2020-04-07-at-15.20.11/screen-shot-2020-04-07-at-15.20.11.png)
+
+Select the security group you just created in Step 1 and click the <strong>Assign security groups</strong> button.
+
+In the <strong>Description</strong> tab at the bottom of the screen, we can now see the security group.
+
+![](https://video.udacity-data.com/topher/2020/April/5e8cfdfa_screen-shot-2020-04-07-at-15.24.37/screen-shot-2020-04-07-at-15.24.37.png)
 
 
 
