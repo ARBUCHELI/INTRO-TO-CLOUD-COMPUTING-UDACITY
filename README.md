@@ -2501,44 +2501,112 @@ def handler(event, context):
 ~/hello$ zip -g function.zip main.py
 ```
 
+## 17. Exercise: Uploading a Lambda Function
+
+Please open the link in a new tab to watch the tutorial:
+
+[![IMAGE ALT TEXT](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/19.jpg)](https://www.youtube.com/watch?v=PInUmbP0g6s&t=2s)
+
+In this exercise, you will upload a code package to Lambda.
+
+### Prerequisites
+If you have not already done so, complete the previous exercises to create a code package (zip file).
+
+### Instructions
+* 1. Create a new Lambda Function from scratch with a Python 3.8 runtime
+* 2. Name the function <strong>hello</strong>
+* 3. Upload the code package to the Lambda
+* 4. Add permissions by creating an IAM role
+* 5. From the IAM Console, create a new role with <strong>Lambda</strong> as a trusted service
+* 6. Set the permissions for the Lambda to be <strong>AWSLambdaVPCAccessExecutionRole</strong>
+* 7. Set the handler to <strong>main.handler</strong>
+* 8. Configure the "Lambda Function" with the <strong>default VPC</strong> with all subnets
+* 9. Set the security group to be <strong>default</strong>
+* 10. Set an environment variable, <strong>REDIS_HOST</strong>, with the <strong>ElastiCache endpoint</strong> (without the port) as the value
+
+## 18. Solution: Uploading a Lambda Function
+
+* 1. Navigate to the Lambda Console
+* 2. Create a new Lambda Function
+* 3. Use <strong>Author from scratch, Python3.8</strong>, and name the function <strong>hello</strong>
+
+![](https://video.udacity-data.com/topher/2020/June/5edf1893_screen-shot-2020-06-08-at-21.58.23/screen-shot-2020-06-08-at-21.58.23.png)
+
+* 4. Expand the permissions section
+* 5. Click the IAM Console link
+
+![](https://video.udacity-data.com/topher/2020/June/5edf18a2_screen-shot-2020-06-08-at-21.58.56/screen-shot-2020-06-08-at-21.58.56.png)
+
+* 6. Click on <strong>Roles</strong> from the left sidebar
+* 7. Create a new role
+* 8. Set the type of trust identity to Lambda
+
+![](https://video.udacity-data.com/topher/2020/June/5edf18b2_screen-shot-2020-06-08-at-21.59.28/screen-shot-2020-06-08-at-21.59.28.png)
+
+* 9. Attach the built-in policy: <strong>"AWSLambdaVPCAccessExecutionRole"</strong>
+
+![](https://video.udacity-data.com/topher/2020/June/5edf18c5_screen-shot-2020-06-08-at-21.59.47/screen-shot-2020-06-08-at-21.59.47.png)
+
+* 10. Name the role <strong>lambda_vpc_role</strong>
+
+![](https://video.udacity-data.com/topher/2020/June/5edf18f8_screen-shot-2020-06-08-at-21.59.57/screen-shot-2020-06-08-at-21.59.57.png)
+
+* 11. Click the <strong>Actions</strong> drop-down menu from the <strong>Function code</strong> section of the Lamba Function Console
+* 12. Select <strong>Upload a .zip file</strong>
+
+![](https://video.udacity-data.com/topher/2020/June/5ee06e11_1/1.png)
+
+* 13. Select the <strong>function.zip</strong> package created in the previous exercise
+
+![](https://video.udacity-data.com/topher/2020/June/5ee06eac_2/2.png)
+
+Once selected, you <strong>MUST</strong> click <strong>Save</strong>
+
+![](https://video.udacity-data.com/topher/2020/June/5ee06edd_3/3.png)
+
+* 14. Scroll down to the <strong>Basic settings</strong> section
+* 15. Click the <strong>Edit</strong> button
+
+![](https://video.udacity-data.com/topher/2020/June/5ee06f5e_5/5.png)
+
+* 16. Set the <strong>Handler</strong> field to <strong>main.handler</strong>
+
+![](https://video.udacity-data.com/topher/2020/June/5ee06f33_6/6.png)
+
+* 17. Select <strong>Use an existing role</strong>
+* 18. Select <strong>lambda-vpc-role</strong> from the drop-down menu of existing roles
+
+![](https://video.udacity-data.com/topher/2020/June/5ee06fd6_7/7.png)
+
+### Setting the REDIS_HOST Environment Variable
+* 1. In another tab, open the [ElastiCache Console](https://eu-north-1.console.aws.amazon.com/elasticache/home?region=eu-north-1)
+* 2. Expand the "redis" node
+* 3. Copy the node's endpoint
+
+![](https://video.udacity-data.com/topher/2020/June/5edf1940_screen-shot-2020-06-08-at-22.02.30/screen-shot-2020-06-08-at-22.02.30.png)
+
+![](https://video.udacity-data.com/topher/2020/June/5edf195d_screen-shot-2020-06-08-at-22.02.52/screen-shot-2020-06-08-at-22.02.52.png)
 
 
+* 4. Click the <strong>Edit</strong> button in the <strong>Environment Variables</strong> section
+* 5. Set the <strong>key</strong> to <strong>REDIS_HOST</strong> and paste the node endpoint as the value
 
+![](https://video.udacity-data.com/topher/2020/June/5edf196b_screen-shot-2020-06-08-at-22.03.00/screen-shot-2020-06-08-at-22.03.00.png)
 
+### Connect The Lambda to the ElastiCache Redis Network
+* 1. Click on the Edit button on the <strong>VPC</strong> section
+* 2. Select <strong>Custom VPC</strong> and select the <strong>default vpc</strong>
+* 3. Select all the subnets under <strong>Subnets</strong>
+* 4. Under the <strong>Security groups</strong> select the <strong>(default)</strong> security group - this enables the Lambda to access the ElastiCache for Redis
+* 5. Click <strong>Save</strong>
 
+![](https://video.udacity-data.com/topher/2020/June/5edf197b_screen-shot-2020-06-08-at-22.03.24/screen-shot-2020-06-08-at-22.03.24.png)
 
+![](https://video.udacity-data.com/topher/2020/June/5edf19ae_screen-shot-2020-06-08-at-22.04.02/screen-shot-2020-06-08-at-22.04.02.png)
 
+![](https://video.udacity-data.com/topher/2020/June/5edf19ba_screen-shot-2020-06-08-at-22.04.16/screen-shot-2020-06-08-at-22.04.16.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![](https://video.udacity-data.com/topher/2020/June/5edf19c8_screen-shot-2020-06-08-at-22.04.38/screen-shot-2020-06-08-at-22.04.38.png)
 
 
 
