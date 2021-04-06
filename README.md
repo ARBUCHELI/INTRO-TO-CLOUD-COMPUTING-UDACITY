@@ -1483,6 +1483,30 @@ Please open the link in a new tab to watch the tutorial:
 * Storage size and type
 * Custom provisioning scripts
 
+## 5. Quiz: EC2 Instances
+
+### QUESTION 1 OF 2
+How do you terminate an EC2 Instance from the AWS Console?
+* Select the Instance and then select Actions -> Instance State -> Terminate
+
+### QUESTION 2 OF 2
+In which section would you enlarge the instance's attached hard drive?
+* Add Storage
+
+## 6. Exercise: Launch An E2 Instance
+
+In this exercise, you will launch an EC2 instance.
+
+No need to connect to this instance using a key pair.
+
+### Instructions
+* Region: <strong>us-east-1</strong>
+* AMI: <strong>Amazon Linux 2 AMI (HVM), SSD Volume Type 64-bit</strong>
+* Type: strong>t2.micro</strong> (Free Tier = 750 hours per month)
+* Root volume size: <strong>20GB</strong>
+* IP: <strong>Public</strong>
+
+
 
 
 
