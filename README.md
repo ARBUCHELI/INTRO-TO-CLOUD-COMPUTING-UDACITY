@@ -1470,6 +1470,10 @@ That why, in this lesson, you'll practice not only launching EC2 instances, but 
 
 ## 4. Launching An EC2 Instance
 
+Please open the link in a new tab to watch the tutorial:
+
+[![IMAGE ALT TEXT](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/19.jpg)](https://www.youtube.com/watch?v=WxigbPUJCd0&t=3s)
+
 ### AWS Elastic Compute Cloud (EC2)
 * Resizeable, scalable compute capacity
 * Instances sizes are predefined by instance types
