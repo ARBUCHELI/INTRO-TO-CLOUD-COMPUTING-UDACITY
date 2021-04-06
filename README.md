@@ -1390,6 +1390,116 @@ There are no tools to limit usage to what’s covered by the AWS Free Tier. This
 
 Remember, even if you are in the middle of the project and need to step away, PLEASE SHUT DOWN YOUR RESOURCES. You can re-instantiate later.
 
+________________________________________________________________________________________________________________________________________________________________________________
+
+# LESSON 4 COMPUTE SERVICES
+
+## 1. Compute Services
+
+![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/17.jpg)
+
+![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/18.jpg)
+
+### Compute Services
+### Regions and Availability Zones
+AWS EC2 is available worldwide, in geographical areas called "regions". Each region contains between 2 and 6 data centers sited miles away from each other and connected to their own power and networking.
+
+Each of those data centers is called an “availability zone”. Within a region, the availability zones are interconnected with fiber-optic cables or other ultra-fast connections.
+
+### Instance types
+EC2 has a wide selection of instance types optimized to fit different use cases. An instance type is comprised of CPU, memory, storage, and networking. The range of instance types EC2 offers gives you the flexibility to choose the right mix for your application.
+
+### Auto Provisioning
+In the cloud, servers can scale up automatically. Launching and configuring an instance automatically, without human intervention, is crucial for smooth and reliable operation. Launching and configuring each instance manually is a recipe for human error.
+
+EC2 allows you to run a custom script the first time an instance boots, for just this reason.
+
+### Security Groups
+Security is very important in the cloud. Access to servers is enforced with firewall rules knowns as “security groups”.
+
+### Elastic IP Address
+Instances' public IP addresses are dynamic and will change when you restart your instance, An Elastic IP Address is static and can always remain attached to the instance you want. An Elastic IP is public and reachable from the Internet.
+
+Throughout this lesson you will practice working with all of these core features of AWS EC2.
+
+![](https://video.udacity-data.com/topher/2020/June/5edd8999_amazon-ec24x/amazon-ec24x.png)
+
+## 2. Lesson Outline
+
+### Course Outline
+In this lesson, you will:
+
+* Create an EC2 instance
+* Automatically provision that instance
+* Configure a security group to allow incoming HTTP connections
+* Connect your EC2 instance with your existing S3 bucket, via IAM roles and policies
+
+In future lessons, you will:
+
+* Create databases
+* Program a serverless function
+
+![](https://video.udacity-data.com/topher/2020/June/5edc6f1b_course-outline/course-outline.png)
+
+### Lesson Outline
+This lesson covers launching an EC2 instance, configuring automatic provisioning via an init script, creating security groups (i.e. a firewall) to allow incoming HTTP connections, and connecting the EC2 instance with an S3 bucket via an IAM role.
+
+### Learning Objectives
+In this lesson, you will:
+
+* Create an IAM role for an EC2 instance
+* Configure a read-only inline IAM policy to access an S3 bucket
+* Launch a Linux virtual machine (EC2 instance)
+* Create a security group to allow HTTP access on port 80
+*  Attach an Elastic IP address to an EC2 instance
+* Create an init script to install the NGINX webserver on your instance
+* Terminate an EC2 instance
+* Update the init script to replace the default NGINX webpage with content from your s3 bucket
+* Launch a new EC2 instance that automatically pulls your custom webpage from S3
+
+## 3. Big Picture
+
+### Big Picture
+EC2 is the heart of AWS cloud computing, and was the very first compute service that AWS offered, starting in 2006. There are now many compute services on AWS, but EC2 remains the most important.
+
+Automation and security best practices are critical when connecting EC2 to other AWS services, in order to minimize human error and create a path for automatic scaling in the future.
+
+That why, in this lesson, you'll practice not only launching EC2 instances, but also configuring security and provisioning the instances automatically.
+
+![](https://video.udacity-data.com/topher/2020/June/5edd9192_ec2-big-picture/ec2-big-picture.png)
+
+## 4. Launching An EC2 Instance
+
+### AWS Elastic Compute Cloud (EC2)
+* Resizeable, scalable compute capacity
+* Instances sizes are predefined by instance types
+* Configuring an instance can be done within the EC2 Launch Wizard:
+* Security groups (i.e. firewall rules)
+* Networking (public or private)
+* Storage size and type
+* Custom provisioning scripts
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
