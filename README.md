@@ -1506,6 +1506,79 @@ No need to connect to this instance using a key pair.
 * Root volume size: <strong>20GB</strong>
 * IP: <strong>Public</strong>
 
+## 7. Solution: Launch An E2 Instance
+
+### Solution: Launch An EC2 Instance
+Use the <strong>us-east-1 N.Vriginia</strong> region to launch an EC2 instance with the following configuration:
+
+* <strong>AMI:</strong> Amazon Linux
+* <strong>Instance type:</strong> t2.micro
+* <strong>IP:</strong> Public
+* <strong>Storage size:</strong> 20GB
+
+For this exercise, we can skip the creation of a new key pair, and acknowledge that we will not be able to connect to the instance.
+
+![](https://video.udacity-data.com/topher/2020/April/5e8cb98d_screen-shot-2020-04-07-at-10.33.54/screen-shot-2020-04-07-at-10.33.54.png)
+
+Choose the <strong>Amazon Linux 2 AMI (HVM), SSD Volume Type 64-bit</strong> image.
+
+![](https://video.udacity-data.com/topher/2020/April/5e8cba04_screen-shot-2020-04-07-at-10.35.25/screen-shot-2020-04-07-at-10.35.25.png)
+
+Select the <strong>t2.micro</strong> option and click the <strong>Next: Configure Instance Details</strong> button.
+
+![](https://video.udacity-data.com/topher/2020/April/5e8cbde0_screen-shot-2020-04-07-at-10.51.46/screen-shot-2020-04-07-at-10.51.46.png)
+
+* 1. Skip the defaults for VPC and Subnet
+* 2. Change the <strong>Auto-assign Public IP</strong> field from the default <strong>disabled</strong> to <strong>Enable</strong> and then click <strong>Next: Add Storage</strong> button
+* 3. Change the default size from <strong>8GB</strong> to <strong>20GB</strong>
+
+![](https://video.udacity-data.com/topher/2020/April/5e8cbcae_screen-shot-2020-04-07-at-10.47.15/screen-shot-2020-04-07-at-10.47.15.png)
+
+Since we do not need any further configuration we can click on the <strong>Review and Launch</strong> button.
+
+![](https://video.udacity-data.com/topher/2020/April/5e8ce73f_screen-shot-2020-04-07-at-13.42.26/screen-shot-2020-04-07-at-13.42.26.png)
+
+Choose to proceed without an SSH key pair.
+
+![](https://video.udacity-data.com/topher/2020/April/5e8ce859_screen-shot-2020-04-07-at-13.52.24/screen-shot-2020-04-07-at-13.52.24.png)
+
+For this exercise, we can skip the creation of a new key pair, and acknowledge that we will not be able to connect to the instance.
+
+![](https://video.udacity-data.com/topher/2020/April/5e8ce916_screen-shot-2020-04-07-at-13.55.50/screen-shot-2020-04-07-at-13.55.50.png)
+
+Select <strong>Proceed without a key pair</strong> and check the box for <strong>I acknowledge that....</strong> Then click on the <strong>Launch Instances</strong> button.
+
+![](https://video.udacity-data.com/topher/2020/April/5e8ce9b4_screen-shot-2020-04-07-at-13.58.09/screen-shot-2020-04-07-at-13.58.09.png)
+
+Every instance has an ID. If we click on the ID starting with the prefix i- we can see the instance.
+
+![](https://video.udacity-data.com/topher/2020/April/5e8cea47_screen-shot-2020-04-07-at-14.00.46/screen-shot-2020-04-07-at-14.00.46.png)
+
+In this page we can verify that:
+
+* Our instance type is: <strong>t2.micro</strong>
+* An <strong>IPv4 Public IP</strong> has been allocated
+* The instance is <strong>running</strong>
+>> * The instance may first take several minutes to boot
+
+## 8. Security Group
+
+Please open the link in a new tab to watch the tutorial:
+
+[![IMAGE ALT TEXT](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/19.jpg)](https://www.youtube.com/watch?v=zn-TVaoy9KE&t=150s)
+
+### Security Group
+* Acts as a firewall
+* Ingress rules can be added to allow traffic to specific services and ports
+* Security groups are scoped to an instance level, not to a network or subnet
+* You can specify ALLOW rules but you can't specify DENY rules
+* You can control traffic via an IP address range (CIDR), or via security group IDs (for other AWS resources)
+
+
+
+
+
+
 
 
 
