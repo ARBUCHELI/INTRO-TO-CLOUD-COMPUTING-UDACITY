@@ -2075,11 +2075,174 @@ In the next lesson, you will:
 
 <strong>Security Group:</strong> A firewall ruleset to control traffic to and from AWS resources
 
+________________________________________________________________________________________________________________________________________________________________________________
 
+# LESSON 5 CLOUD DATABASES AND SERVERLESS ARCHITECTURE
 
+## 1. Serverless Computing
 
+Serverless computing is a managed compute resource that provides backend services without the need for you to manage any infrastructure.
 
+* Focus on development, not infrastructure
+* Reduce the need for DevOps expertise
+* Cost-effective - pay only for fractions of a second
+* Infinite scalability
 
+## 2. Lesson Outline
+
+### Course Outline
+In previous lessons, you:
+
+* Learned about cloud computing
+* Launched a virtual machine on your local computer
+* Created IAM users and policies
+* Uploaded objects to an S3 bucket
+* Launched EC2 instances
+* Configured an IAM role
+* Provisioned an EC2 instance via an init script
+
+![](https://video.udacity-data.com/topher/2020/June/5ede9ed1_course-outline/course-outline.png)
+
+### Lesson Outline
+In this lesson, we will build a complete serverless solution that won't require service management from our side at all. A <strong>Lambda Function</strong> will serve as our backend. The Lambda Function will store data in an <strong>ElastiCache Redis</strong> database. We will connect the Lambda with a serverless frontend called <strong>API Gateway</strong>.
+
+We will also learn how to test the Lambda Function from the console, and how to test the API gateway integration with a tool called <strong>Postman</strong>.
+
+### Learning Objectives
+In this lesson, you will:
+
+* Create an ElastiCache Redis server
+* Create a Lambda Function from the AWS Console
+* Program a Lambda Function with code from a pre-existing zip file
+* Test a Lambda Function from the console
+* Create an API Gateway
+* Connect to an API gateway from the Lambda as a trigger
+* Trigger the Lambda Function from API Gateway, using a tool called Postman
+
+## 3. Big Picture
+
+Serverless is a managed, native cloud architecture that shifts operational responsibility of servers to the cloud. That allows you, the developer, to focus on building applications and services without even thinking about the servers and software needed to run your code.
+
+Cost-efficiency is intertwined with serverless because you only pay for what you use, whereas even virtual servers cost money to run 24/7.
+
+In this lesson, we will use a serverless frontend called <strong>API Gateway</strong> which will send the request to a <strong>Lambda Function</strong>, which will serve as our backend.
+
+That Lambda will either set or get the user's name from a managed, in-memory database service. The Lambda will return the name back to the user via the API Gateway.
+
+![](https://video.udacity-data.com/topher/2020/June/5edea096_serverless-demo-architecture/serverless-demo-architecture.png)
+
+## 4. ElastiCache
+
+SQL --> Structured Query Language.
+
+### Relational Databases
+Are built from tables with a unique identifier for each role.  That unique identifier is used in other tables to create relationships on query-related data together.
+
+This is the reason SQL is known as a relational database.
+
+Relational databases can become hard to manage and performance degrades over time as more and more storage is needed.
+
+To solve these problems and provide faster scalable performance a new type of database emerged called NoSQL. 
+
+### NoSQL Databases
+Don't have tables.  Are more flexible, scale more easily and can handle more data and load.  
+Most are key-value based, or document based.
+
+Key-values associate a value with a key.  The value can be either text or a list of other values.  The relationship between two keys is defined by what their values have in common.
+
+A document-based NoSQL database stores data in any format
+
+### Redis --> Is a type of NoSQL database
+Redis is key-value --> An AWS managed service called ElastiCache is used to ease the set up proccess.  
+
+### ElastiCache
+In memory key-value data store which makes it super fast.
+
+SQL DATABASES --> manage data in a write/read to disk process.
+
+ElastiCache --> All in memory which is much faster, and can handle very large loads easily.
+
+ELASTICACHE: Fully managed service.  You don't need to perform any management tasks, hardware provisioning, software patching, set-up, configuration, and backups are all handled by AWS.
+
+The access is configured using security groups and it is limited to the network where your computer is running.
+
+Can grow up to 170 terabytes.
+
+### ElastiCache
+* Managed, in-memory NoSQL database
+* For security, instances are deployed to a private subnet by default and lack a publicly reachable address
+* Redis is an open-source data store, whereas ElastiCache is AWS's proprietary service the hosts Redis databases for AWS users
+* Great choice for real-time applications such as gaming, chat, and video
+* Easily scalable and replicable
+
+![](https://raw.githubuserconte)nt.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/23.jpg)
+![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/24.jpg)
+![](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/25.jpg)
+
+## 5. Quiz: ElasticCache
+
+### QUIZ QUESTION
+What type of database does the ElastiCache for Redis managed service provide?
+* In-memory NoSQL database
+
+## 6. IAM Policies
+
+Use the <strong>manager</strong> IAM user to complete the exercises in this lesson. You will need to supply the required permissions for the <strong>manager</strong> user.
+
+Navigate to the [IAM console](https://console.aws.amazon.com/iam/home) and select the <strong>manager</strong> user.
+
+Add the following AWS managed policies (permissions):
+
+* <strong>AmazonElastiCacheFullAccess:</strong> This will allow the creation and deletion ElasticCache instances
+* <strong>AWSLambdaFullAccess:</strong> This will allow the creation, update, and deletion of serverless (Lambda) functions
+* <strong>AmazonAPIGatewayAdministrator:</strong> This will allow the manager to configure API Gateway to connect to our Lambda Function via HTTP
+
+## 7. Exercise: ElastiCache For Redis
+
+In this exercise, you will launch a Redis instance on ElastiCache. You will continue to use this instance in the next exercise.
+
+### Instructions
+* <strong>Single node</strong> with <strong>no replication</strong>
+* <strong>t2.micro</strong> type
+* <strong>us-east-1 N.Virginia</strong> region
+* Setup on the <strong>default VPC</strong>
+* No encryption either <strong>in transit</strong> (No Auth) or <strong>at-rest</strong>
+* Name the node <strong>redis</strong>
+
+[![IMAGE ALT TEXT](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/19.jpg)](https://www.youtube.com/watch?v=xafrdiyuIAg&t=5s)
+
+Before you start, you need to get the Virtual Private Cloud ID of the default VPC:
+
+### Default VPC ID
+* 1. Open the [VPC console](https://console.aws.amazon.com/vpc/home?region=us-east-1)
+* 2. Note the default VPC ID
+
+![](https://video.udacity-data.com/topher/2020/April/5e8fd6d7_screen-shot-2020-04-09-at-19.15.14/screen-shot-2020-04-09-at-19.15.14.png)
+
+### Create the ElastiCache Redis Instance
+* 1. Open the [ElastiCache console](https://console.aws.amazon.com/elasticache/home?region=us-east-1#)
+* 2. Change the region on the top right to be <strong>us-east-1 N.Virginia</strong>
+* 3. Click <strong>Redis</strong> on the sidebar menu, then click the <strong>Create</strong> button
+* 4. Name the instance <strong>redis</strong>
+* 5. Change the number of replicas to 0
+* 6. Change the <strong>Node type</strong> to be <strong>t2.micro</strong>
+* 7. Save
+ 
+![](https://video.udacity-data.com/topher/2020/April/5e8fd539_screen-shot-2020-04-09-at-19.08.18/screen-shot-2020-04-09-at-19.08.18.png)
+
+* 8. Under the Advanced Redis Settings, set the <strong>Name</strong> to be <strong>redis-subnet</strong>
+* 9. Set the <strong>Description</strong> to <strong>Redis Subnet</strong>
+* 10. Change the VPC ID to the default VPC ID that you noted previously
+* 11. Select <strong>us-east-1a</strong> as the subnet
+
+![](https://video.udacity-data.com/topher/2020/April/5e8fd8c7_screen-shot-2020-04-09-at-19.23.24/screen-shot-2020-04-09-at-19.23.24.png)
+
+* 12. Scroll down to the <strong>Backup</strong> section and deselect <strong>Enable Automatic backups</strong>
+* 13. Click on the <strong>Create</strong> button
+
+Wait a few minutes for the instance to initialize. You can refresh the dashboard using the refresh arrows icon in the top-right corner of the dashboard.
+
+![](https://video.udacity-data.com/topher/2020/April/5e8fd9f0_screen-shot-2020-04-09-at-19.28.47/screen-shot-2020-04-09-at-19.28.47.png)
 
 
 
