@@ -1714,7 +1714,7 @@ If you haven't already, terminate all previous instances by selecting them in th
 * 1. Using the EC2 Console, select Instances from the sidebar and click <strong>Launch instance</strong>
 * 2. Select <strong>t2.micro</strong> instance type and click the <strong>Next: Configure Instance Details</strong> button
 * 3. Set the <strong>Auto-assign public IP</strong> to <strong>Enabled</strong>, because we need an Internet connection to install the NGINX software
-* 4. Scroll down to the <strong>Advanced Details</strong< section, where we will configure the init script to install the NGINX server
+* 4. Scroll down to the <strong>Advanced Details</strong> section, where we will configure the init script to install the NGINX server
 
 ![](https://video.udacity-data.com/topher/2020/April/5e8d24cc_screen-shot-2020-04-07-at-18.10.33/screen-shot-2020-04-07-at-18.10.33.png)
 
