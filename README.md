@@ -2005,6 +2005,94 @@ mv /tmp/html /usr/share/nginx/
 
 ![](https://video.udacity-data.com/topher/2020/April/5e8e30dc_screen-shot-2020-04-08-at-13.15.14/screen-shot-2020-04-08-at-13.15.14.png)
 
+## 29. Edge Cases
+
+### When Is EC2 Sub-Optimal?
+EC2 resources (memory, CPU) are configured by instance types.
+
+If a process is short-lived or does not need to be running constantly, and its footprint is much smaller than the EC2 instance resources. It might be better to use serverless functions rather than EC2, as a serverless approach will take fewer resources and is designed for short-lived processes.
+
+### QUIZ QUESTION
+Where EC2 is sub-optimal?
+* When you have a short-lived jobs with minimal resource usage
+
+## 30. Lesson Recap
+
+In this lesson, you:
+
+* Launched an EC2 instance
+* Automatically installed NGINX on the server
+* Connected EC2 with an S3 bucket via an IAM role
+* Replaced the NGINX default webpage with content from an S3 bucket
+* Opened connections to the EC2 instance from anywhere via a security group
+
+In the next lesson, you will:
+
+* Execute serverless computing via Lambda functions
+* Connect Lambda Functions with the API Gateway
+* Create an in-memory NoSQL database
+* Test both the API Gateway and Lambda
+
+![](https://video.udacity-data.com/topher/2020/June/5edc6f1b_course-outline/course-outline.png)
+
+### Further Reading
+### Documentation
+* IAM Getting Started (https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started.html)
+* IAM roles for EC2 (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html)
+* EC2 Getting Started (https://aws.amazon.com/ec2/getting-started/)
+* EC2 best practices (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-best-practices.html)
+* Security Groups (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-security-groups.html)
+
+### Books
+* Programming EC2 (https://www.amazon.com/Programming-Amazon-EC2-Survive-Success/dp/1449393683)
+
+### Research
+* Best Practices in Evaluating Elastic Load Balancing White Paper (https://aws.amazon.com/articles/best-practices-in-evaluating-elastic-load-balancing/)
+
+### Blog Posts
+* EC2 for beginners (https://towardsdatascience.com/aws-ec2-for-beginners-56df2e820d7f?gi=946a9446d8d5)
+* AWS IAM Summary (https://enlear.academy/aws-iam-summary-5d97bb129ae1?gi=50f00c0ce6ff)
+* EC2 T2 Insatnces (https://aws.amazon.com/ec2/instance-types/t2/)
+
+### Advanced Topics
+* AWS Nitro System - the system beyond standard virtualization (https://aws.amazon.com/ec2/nitro/)
+* Auto Scaling (https://aws.amazon.com/autoscaling/)
+* Elastic Load Balancing (https://aws.amazon.com/elasticloadbalancing/)
+
+## 31. Glossary
+
+* <strong>EC2:</strong> Elastic Compute Cloud, this is AWS's foremost compute service
+
+* <strong>EC2 Instance:</strong> A virtual server running applications or software in AWS
+
+* <strong>Elastic IP:</strong> A static IP allocated to your account that can be associated and disassociated from EC2 instances
+
+* <strong>IAM Role:</strong> An IAM identity that has no long-term credentials and acts on behalf of the trusted user or service
+
+* <strong>Init Script:</strong> An automation script that provisions and configures an instance on first boot
+
+* <strong>NGINX:</strong> A web server for static and dynamic HTML pages
+
+<strong>Security Group:</strong> A firewall ruleset to control traffic to and from AWS resources
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
