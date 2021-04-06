@@ -2209,6 +2209,8 @@ In this exercise, you will launch a Redis instance on ElastiCache. You will cont
 * No encryption either <strong>in transit</strong> (No Auth) or <strong>at-rest</strong>
 * Name the node <strong>redis</strong>
 
+Please open the link in a new tab to watch the tutorial:
+
 [![IMAGE ALT TEXT](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/19.jpg)](https://www.youtube.com/watch?v=xafrdiyuIAg&t=5s)
 
 Before you start, you need to get the Virtual Private Cloud ID of the default VPC:
@@ -2282,6 +2284,8 @@ In this exercise, you will create a basic Lambda Function.
 
 ## 12. Solution: Hello from Lambda Exercise
 
+Please open the link in a new tab to watch the tutorial:
+
 [![IMAGE ALT TEXT](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/19.jpg)](https://www.youtube.com/watch?v=y2Z2DqZopRw&t=1s)
 
 ### Solution: Hello from Lambda
@@ -2323,6 +2327,8 @@ In this exercise, you will create a basic Lambda Function.
 * Modify the Lambda Function code to read the user out of the event field and display "Udacity".
 
 ## 14. Solution: Lambda Events Exercise
+
+Please open the link in a new tab to watch the tutorial:
 
 [![IMAGE ALT TEXT](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/19.jpg)](https://www.youtube.com/watch?v=Ta-z9Qf1wlM&t=1s)
 
