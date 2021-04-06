@@ -1982,7 +1982,7 @@ Finally, the init script overrides the contents of the <strong>/usr/share/nginx/
 * 3. Choose the <strong>Amazon Linux 2 AMI (HVM), SSD Volume Type 64-bit</strong> image
 * 4. Leave the default instance type as <strong>t2.micro</strong> and click <strong>Next: Configure instance details</strong>
 * 5. Set the <strong>Auto-assign Public IP</strong> to <strong>enabled</strong>
-* 6. Set the <strong>IAM role</srong> to be <strong>web</strong>
+* 6. Set the <strong>IAM role</strong> to be <strong>web</strong>
 * 7. Copy the following script into the <strong>User data</strong> text box <strong>(Note: you must change the to your bucket name (with no spaces after the = sign))</strong>
 
 ```
