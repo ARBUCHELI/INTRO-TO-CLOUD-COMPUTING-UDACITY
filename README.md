@@ -1969,6 +1969,91 @@ Finally, the init script overrides the contents of the <strong>/usr/share/nginx/
 
 ![](https://video.udacity-data.com/topher/2020/April/5e8e30dc_screen-shot-2020-04-08-at-13.15.14/screen-shot-2020-04-08-at-13.15.14.png)
 
+## 28. Solution: Overriding NGINX Defaults Exercise
+
+### Upload to S3
+* 1. Navigate to the S3 console and select your bucket
+* 2. Create a folder called ```web``` in your bucket
+* 3. Upload the SB Admin 2 bootstrap theme zip file to the ```web``` folder
+
+### Launching an EC2 instance using the EC2 Console
+* 1. Navigate to the EC2 Instances Dashboard
+* 2. Click on the <strong>Launch instance</strong> button
+* 3. Choose the <strong>Amazon Linux 2 AMI (HVM), SSD Volume Type 64-bit</strong> image
+* 4. Leave the default instance type as <strong>t2.micro</strong> and click <strong>Next: Configure instance details</strong>
+* 5. Set the <strong>Auto-assign Public IP</strong> to <strong>enabled</strong>
+* 6. Set the <strong>IAM role</srong> to be <strong>web</strong>
+* 7. Copy the following script into the <strong>User data</strong> text box <strong>(Note: you must change the to your bucket name (with no spaces after the = sign))</strong>
+
+```
+#!/bin/bash
+
+BUCKET_NAME=<s3-bucket-name-place-holder>
+yum update -y
+amazon-linux-extras install nginx1.12 -y
+service nginx start
+aws s3 cp s3://${BUCKET_NAME}/web/startbootstrap-sb-admin-2-gh-pages.zip /tmp/
+cd /tmp
+unzip start*
+mv startbootstrap-sb-admin-2-gh-pages html
+rm -rf /usr/share/nginx/html
+mv /tmp/html /usr/share/nginx/
+```
+* 8. Click on the <strong>Review and Launch</strong> button and then click on the <strong>Launch</strong> button
+* 9. Wait about 20-30 seconds for the instance to come up and for the script to finish running
+* 10. Using a browser, visit the web page at the public IP address
+
+![](https://video.udacity-data.com/topher/2020/April/5e8e30dc_screen-shot-2020-04-08-at-13.15.14/screen-shot-2020-04-08-at-13.15.14.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
