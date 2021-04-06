@@ -1882,6 +1882,100 @@ Now that we have a role, let's create an IAM policy so that it can access our S3
 
 ![](https://video.udacity-data.com/topher/2020/April/5e8e1e75_screen-shot-2020-04-08-at-11.56.43/screen-shot-2020-04-08-at-11.56.43.png)
 
+## 25. Overriding NGINX Defaults
+
+### Overriding NGINX Defaults
+NGINX comes with a default web page to verify that the webserver is working.
+
+Instead of configuring a new site for NGINX, we can copy a website to this default location. Our new website will replace the existing NGINX default.
+
+We will store this content in an S3 bucket under the <strong>web</strong> folder. In order to access this content, the following prerequisite must exist:
+
+* S3 bucket storing the zip file for the [SB Admin 2](https://startbootstrap.com/theme/sb-admin-2) theme
+* IAM role and policy for EC2 to access the bucket
+
+### Provisioning Script
+### Note: Make sure to change "BUCKET_NAME" to the name of the bucket you created
+
+```
+#!/bin/bash
+
+   BUCKET_NAME=<s3-bucket-name-place-holder>
+   yum update -y
+   amazon-linux-extras install nginx1.12 -y
+   service nginx start
+   aws s3 cp s3://${BUCKET_NAME}/web/startbootstrap-sb-admin-2-gh-pages.zip /tmp/
+   cd /tmp
+   unzip start*
+   mv startbootstrap-sb-admin-2-gh-pages html
+   rm -rf /usr/share/nginx/html
+   mv /tmp/html /usr/share/nginx/
+```
+
+## 26. Quiz: Overriding NGINX Defaults
+
+### QUIZ QUESTION
+What configuration is optimal for an init script to fetch data from an S3 bucket?
+* IAM permissions set via an IAM role
+
+## 27. Exercise: Overriding NGINX Defaults
+
+In this exercise, you will launch an EC2 instance with an IAM role and pull static website content from an S3 bucket to overwrite the default NGINX website.
+
+### Exercise Requirements
+### Prerequisites
+* Download zip file for [Bootstrap SB2 Admin Theme Site](https://startbootstrap.com/theme/sb-admin-2)
+* Upload the zip file to your <strong>S3</strong> bucket under a folder called <strong>web</strong> (do not extract it)
+
+### EC2 Requirements
+* <strong>AMI:</strong> Amazon Linux 2
+* <strong>IP Address:</strong> Public
+* <strong>Type:</strong> t2.micro
+* <strong>IAM Role:</strong> web (created in the previous exercise)
+* <strong>Security group:</strong> accessible from <strong>anywhere</strong> on <strong>port 80</strong>
+* <strong>Init Script:</strong> see below
+
+### Init Script
+Copy the following script into the <strong>User data</strong> text box in the EC2 Instance Launch Wizard.
+
+### Note: you must change the to your bucket name (with no spaces after the = sign)
+
+```
+   #!/bin/bash
+
+   BUCKET_NAME=<s3-bucket-name-place-holder>
+   yum update -y
+   amazon-linux-extras install nginx1.12 -y
+   service nginx start
+   aws s3 cp s3://${BUCKET_NAME}/web/startbootstrap-sb-admin-2-gh-pages.zip /tmp/
+   cd /tmp
+   unzip start*
+   mv startbootstrap-sb-admin-2-gh-pages html
+   rm -rf /usr/share/nginx/html
+   mv /tmp/html /usr/share/nginx/
+```
+
+### Goal
+You should be able to see the SB Admin 2 web page with images displayed in the browser.
+
+### Init Script Explanation
+This is not necessary to understand in order to complete the exercise. But in case you are interested, here is what the init script does.
+
+The init script installs Nginx web server.
+
+Then it uses the [aws-cli s3 cp command](https://docs.aws.amazon.com/cli/latest/reference/s3/cp.html) to copy the <strong>Bootstrap Theme</strong> zip file from <strong>S3</strong> into the <strong>/tmp</strong> directory on the EC2 instance. Next, the init script extracts the file using the <strong>unzip</strong> command.
+
+Finally, the init script overrides the contents of the <strong>/usr/share/nginx/html</strong> directory with the contents of the unzipped folder.
+
+![](https://video.udacity-data.com/topher/2020/April/5e8e30dc_screen-shot-2020-04-08-at-13.15.14/screen-shot-2020-04-08-at-13.15.14.png)
+
+
+
+
+
+
+
+
 
 
 
