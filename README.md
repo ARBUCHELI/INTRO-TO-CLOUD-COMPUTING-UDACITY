@@ -2315,12 +2315,42 @@ In this exercise, you will create a basic Lambda Function.
 ![](https://video.udacity-data.com/topher/2020/June/5edf0a07_screen-shot-2020-06-08-at-21.01.07/screen-shot-2020-06-08-at-21.01.07.png)
 
 
+## 13. Exercise: Lambda Events
 
+### Exercise: Lambda Events
+* Modify the <strong>testhello</strong> event for the Lambda with the existing field:
+```{"user": "Udacity"}```
+* Modify the Lambda Function code to read the user out of the event field and display "Udacity".
 
+## 14. Solution: Lambda Events Exercise
 
+[![IMAGE ALT TEXT](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/19.jpg)](https://www.youtube.com/watch?v=Ta-z9Qf1wlM&t=1s)
 
+### Solution: Lambda Events Exercise
+* 1. From the ```hello``` Lambda Function, click on the <strong>hellotest</strong> dropdown menu and select <strong>Configure test events</strong>
 
+![](https://video.udacity-data.com/topher/2020/June/5edf0df2_screen-shot-2020-06-08-at-21.12.25/screen-shot-2020-06-08-at-21.12.25.png)
 
+* 2. Select <strong>Edit saved test events</strong> option (it should be pre-selected already)
+* 3. Change <strong>key1</strong> to be <strong>"user"</strong>
+* 4. Change the value for <strong>"user"</strong> to be <strong>"Udacity"</strong>
+* 5. Click Save Event
+
+![](https://video.udacity-data.com/topher/2020/June/5edf0e03_screen-shot-2020-06-08-at-21.13.52/screen-shot-2020-06-08-at-21.13.52.png)
+
+* 6. Edit the code in the editor and set the <strong>body</strong> on <strong>line 7</strong> to be:
+
+```json.dumps(event["user"])```
+
+* 7. Click Save.
+
+![](https://video.udacity-data.com/topher/2020/June/5edf0e15_screen-shot-2020-06-08-at-21.14.33/screen-shot-2020-06-08-at-21.14.33.png)
+
+* 8. Click the <strong>Test</strong> button.
+* 9. Expand the results.
+* 10. Verify message: <strong>Udacity</strong>
+
+![](https://video.udacity-data.com/topher/2020/June/5edf0e26_screen-shot-2020-06-08-at-21.15.04/screen-shot-2020-06-08-at-21.15.04.png)
 
 
 
