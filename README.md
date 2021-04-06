@@ -1574,7 +1574,19 @@ Please open the link in a new tab to watch the tutorial:
 * You can specify ALLOW rules but you can't specify DENY rules
 * You can control traffic via an IP address range (CIDR), or via security group IDs (for other AWS resources)
 
+## 9. Quiz: Security Group
 
+### QUIZ QUESTION
+What is the purpose of an AWS security group?
+* Control inbound and outbound traffic
+
+## 10. Exercise: Security Group
+In this exercise, you will create a <strong>security group</strong> to allow traffic to an instance.
+
+### Instructions
+* If you have not done so already, launch an EC2 instance
+* Create a new Security Group allowing <strong>Port 80</strong> and <strong>Port 22</strong> Inbound traffic from <strong>anywhere</strong> (any IP address)
+* Attach the security group to the instance
 
 
 
