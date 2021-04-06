@@ -2358,6 +2358,158 @@ Please open the link in a new tab to watch the tutorial:
 
 ![](https://video.udacity-data.com/topher/2020/June/5edf0e26_screen-shot-2020-06-08-at-21.15.04/screen-shot-2020-06-08-at-21.15.04.png)
 
+## 15. Exercise: Packaging Code For Lambda Deployment
+
+In this exercise, you will prepare a package for a Lambda deployment. Your code will include both the Lambda Function code and the <strong>Redis</strong> dependency.
+
+### Prerequisites
+To complete this exercise, you will need:
+
+* [Python3](https://www.python.org/downloads/)
+* [pip](https://pip.pypa.io/en/stable/)
+
+### Instructions
+* Install the <strong>Redis</strong> dependency into the <strong>package</strong> folder
+>> * Hint: use ```pip install --target```
+* Zip the folder
+
+Code to include as ```main.py```
+
+```
+import redis
+import os
+import json
+
+def handler(event, context):
+    print("Received event: " + json.dumps(event, indent=2))
+    redis_host = os.environ.get("REDIS_HOST")
+    redis_port = 6379
+    redis_password = ""
+
+    r = redis.StrictRedis(
+        host=redis_host,
+        port=redis_port,
+        password=redis_password,
+        decode_responses=True
+    )
+
+    name = event.get("name")
+
+    if event.get("body"):
+        name = json.loads(event["body"]).get("name")
+
+
+    if name:
+        redis_successful_set = r.set("name", name)
+        if redis_successful_set:
+            return {
+                "statusCode": 200,
+                "body": "Success! {name} was written to Redis".format(name=name.capitalize())
+            }
+        else:
+            return {
+                "statusCode": 500,
+                "body": "Oops! Could not write {name} to Redis".format(name=name.capitalize())
+            }
+
+
+    return {
+        "statusCode": 200,
+        "body": "Hello {name} nice to meet you".format(name=r.get("name").capitalize())
+    }
+```
+
+## 16. Solution: Packaging Code For Lambda Deployment
+
+Please open the link in a new tab to watch the tutorial:
+
+[![IMAGE ALT TEXT](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/27.jpg)](https://www.youtube.com/watch?v=V1H-U0UIvTc&t=6s)
+
+### Prerequisites
+To complete this exercise solution, you will need:
+
+* [Python3](https://www.python.org/downloads/) installed
+
+### Create the Lambda Package
+For this section, you will need to have Python3 installed.
+
+Lambda Functions are triggered by <strong>events</strong>. When our Lambda Function is triggered, our function will check if the event has a "name" field. if the even has a "name" field, our function will store the name in Redis. If the event does not have a name field, our function will fetch the name set in Redis.
+
+* 1. Create a new folder on your computer called <strong>hello</strong>
+* 2. Create a new file called <strong>main.py</strong> inside the <strong>hello</strong> folder
+* 3. Copy the following code into the <strong>main.py</strong> file
+
+```
+import redis
+import os
+import json
+
+def handler(event, context):
+    print("Received event: " + json.dumps(event, indent=2))
+    redis_host = os.environ.get("REDIS_HOST")
+    redis_port = 6379
+    redis_password = ""
+
+    r = redis.StrictRedis(
+        host=redis_host,
+        port=redis_port,
+        password=redis_password,
+        decode_responses=True
+    )
+
+    name = event.get("name")
+
+    if event.get("body"):
+        name = json.loads(event["body"]).get("name")
+
+
+    if name:
+        redis_successful_set = r.set("name", name)
+        if redis_successful_set:
+            return {
+                "statusCode": 200,
+                "body": "Success! {name} was written to Redis".format(name=name.capitalize())
+            }
+        else:
+            return {
+                "statusCode": 500,
+                "body": "Oops! Could not write {name} to Redis".format(name=name.capitalize())
+            }
+
+
+    return {
+        "statusCode": 200,
+        "body": "Hello {name} nice to meet you".format(name=r.get("name").capitalize())
+    }
+ ```
+ 
+ * 4. Use the following command to install the code dependencies into a folder called <strong>package</strong>
+
+```pip3 install --target ./package Redis```
+
+* 5. Create a ZIP archive of the dependencies using the following command
+
+```
+~hello$ cd package
+~hello/package$ zip -r9 ../function.zip .
+```
+
+* 6. Add your function code to the archive
+
+```
+~/hello/package$ cd ..
+~/hello$ zip -g function.zip main.py
+```
+
+
+
+
+
+
+
+
+
+
 
 
 
