@@ -1798,24 +1798,89 @@ Once the instance is associated, you can click on <strong>Associated Instance ID
 
 ![](https://video.udacity-data.com/topher/2020/April/5e8d01a0_screen-shot-2020-04-07-at-15.40.19/screen-shot-2020-04-07-at-15.40.19.png)
 
+## 21. IAM Role
 
+Please open the link in a new tab to watch the tutorial:
 
+[![IMAGE ALT TEXT](https://raw.githubusercontent.com/ARBUCHELI/INTRO-TO-CLOUD-COMPUTING/master/images/19.jpg)](https://www.youtube.com/watch?v=8s6W9YfgjuA&t=181s)
 
+### IAM Role
+* An IAM identity that does not have long-term credentials
+* Can be assumed by a trusted service and operate on your behalf
+* Designed for service-to-service communication
+* Defines a set of permissions for accessing AWS services
+* Is not bound to an identifiable user
 
+![](https://video.udacity-data.com/topher/2020/June/5eddcabb_iam-role/iam-role.png)
 
+## 22. Quiz: IAM Role
 
+### QUIZ QUESTION
+What is the difference between an IAM user and an IAM role?
+* IAM user has long-term credentials while IAM role does not have credentials
 
+## 23. Exercise: IAM Role
 
+In this exercise, you will create an IAM role with a read-only policy to an S3 bucket.
 
+### Instructions
+* If you have not already done so, create an S3 bucket with a folder inside
+* Create an IAM Role
+* Attach an <strong>Inline IAM Policy</strong> allowing <strong>Read-Only</strong> access to that <strong>S3 bucket</strong>
 
+## 24. Solution: IAM Role Exercise
 
+An IAM Role is an IAM identity similar to IAM user. Instead of uniquely associating with a person, a role is designed for anyone who needs to assume it. This is an excellent fit for a service or a server-to-server identity.
 
+A role is more secure than the long-lived credentials of an IAM user because when the role is assumed it provides temporary security credentials that expire and renew every 15 minutes
 
+### Create the IAM Role
+* Navigate to the <strong>IAM console</strong>
+* Click <strong>Roles</strong> on the sidebar menu
+* Click on the <strong>Create Role</strong> button
+* Since we intended to use the role on an EC2 in the next exercise, choose <strong>EC2</strong> as the use case, and click on <strong>Next: Permissions</strong> button
 
+![](https://video.udacity-data.com/topher/2020/April/5e8e1491_screen-shot-2020-04-08-at-11.03.54/screen-shot-2020-04-08-at-11.03.54.png)
 
+* 5. If we were to click on the <strong>Create</strong> Policy button, the role creation would be canceled, so instead click on Next until you get to the review page
+* 6. Name the role <strong>web</strong> and click on the <strong>Create Role</strong> button
 
+![](https://video.udacity-data.com/topher/2020/April/5e8e1497_screen-shot-2020-04-08-at-11.14.34/screen-shot-2020-04-08-at-11.14.34.png)
 
+![](https://video.udacity-data.com/topher/2020/April/5e8e14fc_screen-shot-2020-04-08-at-11.16.17/screen-shot-2020-04-08-at-11.16.17.png)
 
+### Creating and Attaching an IAM Policy to the Role
+Now that we have a role, let's create an IAM policy so that it can access our S3 bucket.
+
+* 1. From the sidebar menu click on <strong>Policies</strong> and then click on the <strong>Create Policy</strong> button
+* 2. Select <strong>S3</strong> for the service
+* 3. On the <strong>Actions</strong> field select <strong>ListBucket</strong> and <strong>GetObject</strong>
+* 4. Click on Resources, while it is set to <strong>specific</strong> click the <strong>Add ARN</strong> for the <strong>bucket</strong> and add your bucket name
+* 5. Click on the <strong>Add ARN</strong> for the object, set the <strong>bucket name</strong> again to your bucket name and set the <strong>object name</strong> to "web/*"
+
+![](https://video.udacity-data.com/topher/2020/April/5e8e1c1b_screen-shot-2020-04-08-at-11.45.42/screen-shot-2020-04-08-at-11.45.42.png)
+
+![](https://video.udacity-data.com/topher/2020/April/5e8e44db_screen-shot-2020-04-08-at-14.35.20/screen-shot-2020-04-08-at-14.35.20.png)
+
+* 7. Click on the <strong>Review policy</strong> button, set a name (for example, "ec2_web_s3_access") and click the <strong>Create policy</strong> button
+
+![](https://video.udacity-data.com/topher/2020/April/5e8e1cc9_screen-shot-2020-04-08-at-11.49.37/screen-shot-2020-04-08-at-11.49.37.png)
+
+### Attaching the Policy to the IAM Role
+* 1. Click on the <strong>Roles</strong> on the sidebar menu of the IAM console
+* 2. Search for the role "web"
+
+![](https://video.udacity-data.com/topher/2020/April/5e8e1d29_screen-shot-2020-04-08-at-11.51.08/screen-shot-2020-04-08-at-11.51.08.png)
+
+* 3. Click on the role name to edit the role
+* 4. Click on the <strong>Attach policies</strong> button
+
+![](https://video.udacity-data.com/topher/2020/April/5e8e1dff_screen-shot-2020-04-08-at-11.52.53/screen-shot-2020-04-08-at-11.52.53.png)
+
+* 5. Search for "web" to find the policy you just created
+* 6. Select it and click the <strong>Attach policies</strong> button
+
+![](https://video.udacity-data.com/topher/2020/April/5e8e1e75_screen-shot-2020-04-08-at-11.56.43/screen-shot-2020-04-08-at-11.56.43.png)
 
 
 
